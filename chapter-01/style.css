@@ -4,11 +4,15 @@ body {
     color: white;
 }
 
+.container {
+    margin-inline:2rem;
+    text-align: center;
+}
+
+.container * {
+    padding-block: 1rem;
+}
+
 .para {
-    background-image: linear-gradient(to left, dimgray, black);
-    background-blend-mode:hard-light;
-    color: violet;
-    font-weight: 900;
-    font-size: 2rem;
-    padding: 1rem;
+    color: black;
 }
