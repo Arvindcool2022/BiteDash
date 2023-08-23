@@ -1,0 +1,19 @@
+{
+  "name": "learn-react",
+  "version": "1.0.0",
+  "description": "learning React JS from Namaste JS",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/Arvindcool2022/Learn-React.js.git)"
+  },
+  "keywords": [],
+  "author": "Arvind Cool",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
