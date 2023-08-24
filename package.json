@@ -2,10 +2,19 @@
   "name": "learn-react",
   "version": "1.0.0",
   "description": "learning React JS from Namaste JS",
-  "main": "App.js",
   "scripts": {
-    "test": "jest"
-  },
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  }, 
+    "//": {
+      "npm build" : "not working",
+      "npx build" : "not working",
+      "npx start" : "not working",
+      "npm start" : "working",
+      "npx parcel index.html" : "working",
+      "npx parcel build index.html":"working"
+    },
   "repository": {
     "type": "git",
     "url": "(https://github.com/Arvindcool2022/Learn-React.js.git)"
@@ -14,6 +23,14 @@
   "author": "Arvind Cool",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.9.3"
-  }
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslists": [
+    "last 5 versions"
+  ]
 }
