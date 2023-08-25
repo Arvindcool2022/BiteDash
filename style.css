@@ -1,9 +1,21 @@
+*{
+    box-sizing: border-box;
+}
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: black;
     color: white;
+    margin: 0;
 }
 
-footer{
-    display: none;
+#not-rendered {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: white;
+    color: red;
+    font-weight: 900;
 }

@@ -8,10 +8,12 @@
     "build": "parcel build index.html"
   }, 
     "//": {
-      "npm build" : "not working",
-      "npx build" : "not working",
       "npx start" : "not working",
+      "npx build" : "not working",
+      "npm build" : "not working",
       "npm start" : "working",
+      "npm run start" : "working",
+      "npm run build": "working",
       "npx parcel index.html" : "working",
       "npx parcel build index.html":"working"
     },

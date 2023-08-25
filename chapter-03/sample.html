@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script defer>
+        const header = <h1>Hello from React JS!</h1>;
+        const root = ReactDOM.createRoot(document.querySelector('#root'));
+        root.render(header);
+    </script>
+    <title>React JS</title>
+</head>
+
+<body>
+    <h1>Learning react JS</h1>
+    <div id="root"></div>
+</body>
+
+</html> -->
+
+<!-- above code will through a syntax error because jsx is not valid JS and it needs to be transpiled before it reaches browser engine -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Add Babel script for transpiling JSX -->
+    <script defer crossorigin src="https://unpkg.com/babel-standalone@7.0.0-beta.3/babel.min.js"></script>
+    <title>React JS</title>
+</head>
+
+<body>
+    <h1>Learning react JS</h1>
+    <div id="root"></div>
+
+    <!-- JSX code transpiled by Babel -->
+    <script type="text/babel">
+        const header = <h1>Hello from React JS!</h1>;
+        const root = ReactDOM.createRoot(document.querySelector('#root'));
+        root.render(header);
+    </script>
+</body>
+
+</html>
