@@ -90,80 +90,86 @@ const CarouselSlide = () => {};
 const SmallCarouselItem = () => {};
 
 const Carousel = () => (
-  <div className="carousel">
+  <div className="carousel container">
     <h1 className="carousel-title">Best offers for you</h1>
-    <div className="carousel__img-container">
-      <img
-        className="carousel__img"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/d51fc17ab1049acb3b4cda413f86fad5"
-      />
-    </div>
-    <div className="carousel__img-container">
-      <img
-        className="carousel__img"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/28f92512e727f99bbb1c90d2f469b2de"
-      />
+    <div className="carousel__container">
+      <div className="carousel__img-container">
+        <img
+          className="carousel__img"
+          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/d51fc17ab1049acb3b4cda413f86fad5"
+        />
+      </div>
+      <div className="carousel__img-container">
+        <img
+          className="carousel__img"
+          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/28f92512e727f99bbb1c90d2f469b2de"
+        />
+      </div>
     </div>
   </div>
 );
 
 const SmallCarousel = () => (
-  <div className="sm-carousel">
+  <div className="sm-carousel container">
     <h1 className="sm-carousel-title">What's in your mind?</h1>
-    <div className="sm-carousel__img-container">
-      <img
-        className="sm-carousel__img"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/Biryani_2.png"
-        alt="food"
-      />
-    </div>
-    <div className="sm-carousel__img-container">
-      <img
-        className="sm-carousel__img"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667626/PC_Creative%20refresh/South_Indian_4.png"
-        alt="food"
-      />
-    </div>
-    <div className="sm-carousel__img-container">
-      <img
-        className="sm-carousel__img"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Pure_Veg.png"
-        alt="food"
-      />
-    </div>
-    <div className="sm-carousel__img-container">
-      <img
-        className="sm-carousel__img"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029856/PC_Creative%20refresh/3D_bau/banners_new/Pizza.png"
-        alt="food"
-      />
-    </div>
-    <div className="sm-carousel__img-container">
-      <img
-        className="sm-carousel__img"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png"
-        alt="food"
-      />
-    </div>
-    <div className="sm-carousel__img-container">
-      <img
-        className="sm-carousel__img"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/North_Indian_4.png"
-        alt="food"
-      />
+    <div className="sm-carousel__container">
+      <div className="sm-carousel__img-container">
+        <img
+          className="sm-carousel__img"
+          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/Biryani_2.png"
+          alt="food"
+        />
+      </div>
+      <div className="sm-carousel__img-container">
+        <img
+          className="sm-carousel__img"
+          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667626/PC_Creative%20refresh/South_Indian_4.png"
+          alt="food"
+        />
+      </div>
+      <div className="sm-carousel__img-container">
+        <img
+          className="sm-carousel__img"
+          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Pure_Veg.png"
+          alt="food"
+        />
+      </div>
+      <div className="sm-carousel__img-container">
+        <img
+          className="sm-carousel__img"
+          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029856/PC_Creative%20refresh/3D_bau/banners_new/Pizza.png"
+          alt="food"
+        />
+      </div>
+      <div className="sm-carousel__img-container">
+        <img
+          className="sm-carousel__img"
+          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png"
+          alt="food"
+        />
+      </div>
+      <div className="sm-carousel__img-container">
+        <img
+          className="sm-carousel__img"
+          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/North_Indian_4.png"
+          alt="food"
+        />
+      </div>
     </div>
   </div>
 );
 
 const Filters = () => (
-  <div>
+  <div className="container">
     <h1 className="filter-title">
       Restaurants with online food delivery in Chennai
     </h1>
     <div
       className="filters"
-      style={{ backgroundColor: 'red', height: '2rem' }}
-    ></div>
+      style={{ border: '1px #666 solid', font: '600 2rem' }}
+    >
+      filters come here
+    </div>
   </div>
 );
 const Card = () => (
@@ -180,7 +186,7 @@ const Card = () => (
       <h3 className="card__title">A2B Adyar Ananda Bhavan</h3>
       <p className="card__detail">South Indian, North Indian, Sweets</p>
       <p className="card__rating">
-        4.8<i className="bi bi-star-fill"></i>
+        4.8 <i className="bi bi-star-fill"></i>
         <span className="card__votes">(255)</span>
       </p>
     </div>
@@ -188,7 +194,7 @@ const Card = () => (
 );
 
 const CardContainer = () => (
-  <div className="container">
+  <div className="restaurant-container container">
     <Card />
     <Card />
     <Card />
