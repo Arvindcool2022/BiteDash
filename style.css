@@ -4,6 +4,7 @@
 body {
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
+    color: #333;
     /* font-family: 'Source Serif 4', serif; */
     margin: 0;
 }
@@ -12,11 +13,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 .75rem ;
-    font-size: clamp(1rem, 0.8884rem + 0.2976vw, 1.15625rem);
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
-    position: relative;
+    font-size: clamp(1rem, 0.8884rem + 0.2976vw, 1.15625rem);
     overflow: hidden;
+    padding: 0 .75rem ;
+    position: relative;
 }
 
 .header__brand {
@@ -69,31 +70,36 @@ body {
 
 
 .header__nav-list{
-    list-style: none;
     display: flex;
+    align-items: center;
     gap: clamp(0.75rem, 0.2143rem + 1.4286vw, 1.5rem);
+    list-style: none;
     text-transform: capitalize;
 }
+
 .header__nav-items:hover {
     text-decoration: underline;
 }
 
 .header__btn {
-    text-transform: capitalize;
-    outline: 2px solid limegreen;
-    border: 0;
-    border-radius: 3px;
-    font-size: 1.15rem;
-    padding: .15rem .75rem;
     background-color: transparent;
+    border-radius: 3px;
+    border: 0;
+    font-size: 1.15rem;
+    margin-bottom: .5rem;
+    margin-left: 2rem;
+    outline: 2px solid orangered;
+    padding: .35rem .75rem;
+    text-transform: capitalize;
 }
 
 .header__btn> .bi {
     margin-right:0.5rem;
+    fill: orangered;
 } 
 
 .header__btn:hover{
-    background-color: limegreen;
+    background-color: orangered;
 }
 
 .header__nav-items> .bi{
