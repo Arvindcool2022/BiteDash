@@ -5,7 +5,7 @@ body {
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
     color: #333;
-    /* font-family: 'Source Serif 4', serif; */
+    /* font-family: 'Oswald', sans-serif; */
     margin: 0;
 }
 
@@ -78,6 +78,7 @@ body {
     list-style: none;
     text-transform: capitalize;
     cursor: pointer; 
+    white-space:nowrap;
 }
 
 .header__nav-items:hover {
@@ -109,6 +110,7 @@ body {
 .header__nav-items> .bi{
     margin-right:clamp(0.5rem, 0.1429rem + 0.9524vw, 1rem);
 }
+
 
 /*# MAIN SECTION  */
 
@@ -147,8 +149,8 @@ body {
 
 .restaurant-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 2rem;
     justify-content: center;
 }
 
@@ -156,9 +158,14 @@ body {
 
 .card {
     padding: 0.5rem;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
     border-radius: 12px;
     cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.card:hover{
+    /* box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.075); */
+    transform: scale(0.95);
 }
 
 .card__img-container {
@@ -169,18 +176,23 @@ body {
 
 .card__img {
     width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
 }
 
 .card__img-container > span {
+    font-family: 'Oswald', sans-serif;
+    /* webkit-font-smoothing: antialiased; */
     position: absolute;
-    top: 5px;
-    left: 5px;
-    background-color: rgb(255, 110, 58);
+    bottom:0;
+    left: 0;
+    width: 100%;
     border-radius: 4px;
+    background-image: linear-gradient(to top, black, transparent);
     padding: 0.25rem;
     color: white;
-    font-weight: 500;
-    font-size: 0.75rem;
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .card__title {
@@ -196,5 +208,8 @@ body {
 .card__votes{
     font-weight: 100;
     color: #666;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
+}
+.card__rating>.bi {
+    padding-left: 0.5rem;
 }
