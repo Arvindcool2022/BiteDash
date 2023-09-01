@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "learning React JS from Namaste JS",
   "scripts": {
-    "test": "jest",
+    "test" : "jest",
     "start": "parcel index.html",
     "build": "parcel build index.html"
   }, 
     "//": {
+      "this is a" : "comment section",
       "npx start" : "not working",
       "npx build" : "not working",
       "npm build" : "not working",

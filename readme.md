@@ -1,5 +1,62 @@
-# [ _Chapter 01 - Inception_](chapter-01\readme.md)
+```javascript
+/*
+header - sticky or fixed
+    - div
+        - logo
+        - location -> canvas
 
-# [_Chapter 02 - Igniting our App_](chapter-02\readme.md)
+    - navigation 
+        - search -> inserts a search bar
+        - offer 
+        - help -> accordians and tabs
+        - sign-in 
+        - cart --> ????
 
-# [_Chapter 03 - Laying the foundation_](chapter-03\readme.md)
+section
+    -div
+        - 2 card carousel
+    -div
+        - dish type carousel
+    -div
+        - filters (if nav-bar crosses here it's contents changes to filter bar with small search)
+    - container
+        - dynamic cards
+
+footer
+    - links
+    - copyrights
+    - address 
+    - contact
+    - feedback
+*/
+```
+
+```
+header - sticky or fixed
+|── div
+| |── logo
+| |── location -> canvas
+|── navigation
+| |── logo
+| |── search -> inserts a search bar
+| |── offer
+| |── help -> accordians and tabs
+| |── sign-in
+| |── cart --> ????
+section
+|── div
+| |── 2 card carousel
+|── div
+| |── dish type carousel
+|── div
+| |── filters (if nav-bar crosses here it's contents changes to filter bar with small search)
+|── container
+| |── dynamic cards
+footer
+|── links
+|── copyrights
+|── address
+|── contact
+|── feedback
+
+```
