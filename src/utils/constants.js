@@ -1,4 +1,4 @@
-const locations = [
+const LOCATIONS = [
   'chennai',
   'mumbai',
   'delhi',
@@ -10,7 +10,7 @@ const locations = [
   'trivandaram'
 ];
 
-const carouselList = [
+const CAROUSEL_DATA = [
   {
     id: '750132',
     imageId: 'v1674029850/PC_Creative%20refresh/3D_bau/banners_new/Dosa.png',
@@ -346,7 +346,7 @@ const carouselList = [
   }
 ];
 
-const restaurantList = [
+const RESTAURANT_DATA = [
   {
     info: {
       id: '17830',
@@ -2162,4 +2162,4 @@ const restaurantList = [
   }
 ];
 
-export { locations, carouselList, restaurantList };
+export { LOCATIONS, CAROUSEL_DATA, RESTAURANT_DATA };

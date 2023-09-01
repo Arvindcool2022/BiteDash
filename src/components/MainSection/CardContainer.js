@@ -1,9 +1,9 @@
-import { restaurantList } from '../../utils/constants';
+import { RESTAURANT_DATA } from '../../utils/constants';
 import Card from './Card';
 
 const CardContainer = () => (
   <div className="restaurant-container container">
-    {restaurantList.map(restaurant => (
+    {RESTAURANT_DATA.map(restaurant => (
       <Card key={restaurant.info.id} restaurantObject={restaurant?.info} />
     ))}
   </div>
