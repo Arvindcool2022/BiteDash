@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom/client';
 import logo from './chapter-04/delivery app logo.svg';
 
-const data = [
+const restaurantList = [
   {
     info: {
       id: '17830',
@@ -1818,6 +1818,342 @@ const data = [
   }
 ];
 
+const carouselList = [
+  {
+    id: '750132',
+    imageId: 'v1674029850/PC_Creative%20refresh/3D_bau/banners_new/Dosa.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80426?collection_id=80426&tags=layout_CCS_Dosa&type=rcv2',
+      text: 'Dosa',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurants curated for dosa',
+      altTextCta: 'open'
+    },
+    entityId: 'swiggy://collectionV2?collection_id=80426&tags=layout_CCS_Dosa',
+    frequencyCapping: {}
+  },
+  {
+    id: '750572',
+    imageId:
+      'v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Pure_Veg.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80439?collection_id=80439&tags=layout_CCS_PureVeg&type=rcv2',
+      text: 'Pure Veg',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurants curated for veg',
+      altTextCta: 'open'
+    },
+    entityId:
+      'swiggy://collectionV2?collection_id=80439&tags=layout_CCS_PureVeg',
+    frequencyCapping: {}
+  },
+  {
+    id: '750644',
+    imageId: 'v1674029846/PC_Creative%20refresh/3D_bau/banners_new/Idli.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80441?collection_id=80441&tags=layout_CCS_Idli&type=rcv2',
+      text: 'Idli',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurants curated for idly',
+      altTextCta: 'open'
+    },
+    entityId: 'swiggy://collectionV2?collection_id=80441&tags=layout_CCS_Idli',
+    frequencyCapping: {}
+  },
+  {
+    id: '749806',
+    imageId: 'v1674029844/PC_Creative%20refresh/3D_bau/banners_new/Appam.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80353?collection_id=80353&tags=layout_BAU_Contextual%2Cappam%2Clayout_ux4&type=rcv2',
+      text: 'Appam',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurants curated for appam',
+      altTextCta: 'open'
+    },
+    entityId: '80353',
+    frequencyCapping: {}
+  },
+  {
+    id: '750237',
+    imageId: 'v1674029855/PC_Creative%20refresh/3D_bau/banners_new/Poori.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80378?collection_id=80378&tags=layout_BAU_Contextual%2Cpoori&type=rcv2',
+      text: 'Poori',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurant curated for poori',
+      altTextCta: 'open'
+    },
+    entityId: '80378',
+    frequencyCapping: {}
+  },
+  {
+    id: '750235',
+    imageId:
+      'v1674029860/PC_Creative%20refresh/3D_bau/banners_new/Sandwich.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/83667?collection_id=83667&tags=layout_CCS_Sandwiches&type=rcv2',
+      text: 'Sandwich',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurants curated for sandwich',
+      altTextCta: 'open'
+    },
+    entityId:
+      'swiggy://collectionV2?collection_id=83667&tags=layout_CCS_Sandwiches',
+    frequencyCapping: {}
+  },
+  {
+    id: '750599',
+    imageId: 'v1674029846/PC_Creative%20refresh/3D_bau/banners_new/Coffee.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/83908?collection_id=83908&tags=layout_CCS_Coffee&type=rcv2',
+      text: 'Coffee',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurants curated for coffee',
+      altTextCta: 'open'
+    },
+    entityId:
+      'swiggy://collectionV2?collection_id=83908&tags=layout_CCS_Coffee',
+    frequencyCapping: {}
+  },
+  {
+    id: '750555',
+    imageId: 'v1674029842/PC_Creative%20refresh/3D_bau/banners_new/Uttapam.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80416?collection_id=80416&tags=layout_CCS_Uthappam&type=rcv2',
+      text: 'Uthappam',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurant curated for uttappam',
+      altTextCta: 'open'
+    },
+    entityId:
+      'swiggy://collectionV2?collection_id=80416&tags=layout_CCS_Uthappam',
+    frequencyCapping: {}
+  },
+  {
+    id: '750562',
+    imageId: 'v1674029842/PC_Creative%20refresh/3D_bau/banners_new/Vada.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80427?collection_id=80427&tags=layout_BAU_Contextual%2Cvada&type=rcv2',
+      text: 'Vada',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurants curated for vada',
+      altTextCta: 'open'
+    },
+    entityId: '80427',
+    frequencyCapping: {}
+  },
+  {
+    id: '750203',
+    imageId: 'v1674029853/PC_Creative%20refresh/3D_bau/banners_new/Paratha.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80476?collection_id=80476&tags=layout_BAU_Contextual%2Cparatha%2Cads_pc_paratha&type=rcv2',
+      text: 'Paratha',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurants curated for paratha',
+      altTextCta: 'open'
+    },
+    entityId: '80476',
+    frequencyCapping: {}
+  },
+  {
+    id: '749874',
+    imageId: 'v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Cakes.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/83656?collection_id=83656&tags=layout_CCS_Cake&type=rcv2',
+      text: 'Cakes',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurant curated for cakes',
+      altTextCta: 'open'
+    },
+    entityId: 'swiggy://collectionV2?collection_id=83656&tags=layout_CCS_Cake',
+    frequencyCapping: {}
+  },
+  {
+    id: '749879',
+    imageId:
+      'v1674029844/PC_Creative%20refresh/3D_bau/banners_new/Chole_Bature.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80383?collection_id=80383&tags=layout_CCS_CholeBhature&type=rcv2',
+      text: 'Chole Bhature',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurant curated for chhole bhatoore',
+      altTextCta: 'open'
+    },
+    entityId:
+      'swiggy://collectionV2?collection_id=80383&tags=layout_CCS_CholeBhature',
+    frequencyCapping: {}
+  },
+  {
+    id: '750638',
+    imageId: 'v1674029843/PC_Creative%20refresh/3D_bau/banners_new/Juice.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80446?collection_id=80446&tags=layout_Juices_Contextual&type=rcv2',
+      text: 'Juice',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurants curated for juice',
+      altTextCta: 'open'
+    },
+    entityId:
+      'swiggy://collectionV2?collection_id=80446&tags=layout_Juices_Contextual',
+    frequencyCapping: {}
+  },
+  {
+    id: '750239',
+    imageId: 'v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Shakes.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/83674?collection_id=83674&tags=layout_CCS_Shakes&type=rcv2',
+      text: 'Shake',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurant curated for shakes',
+      altTextCta: 'open'
+    },
+    entityId:
+      'swiggy://collectionV2?collection_id=83674&tags=layout_CCS_Shakes',
+    frequencyCapping: {}
+  },
+  {
+    id: '750244',
+    imageId: 'v1674029854/PC_Creative%20refresh/3D_bau/banners_new/Puttu.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80386?collection_id=80386&tags=layout_BAU_Contextual%2Cputtu&type=rcv2',
+      text: 'Puttu',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurant curated for puttu',
+      altTextCta: 'open'
+    },
+    entityId: '80386',
+    frequencyCapping: {}
+  },
+  {
+    id: '750205',
+    imageId: 'v1674029853/PC_Creative%20refresh/3D_bau/banners_new/Parotta.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80478?collection_id=80478&tags=layout_BAU_Contextual%2Cparotta&type=rcv2',
+      text: 'Parotta',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurant curated for parotta',
+      altTextCta: 'open'
+    },
+    entityId: '80478',
+    frequencyCapping: {}
+  },
+  {
+    id: '750200',
+    imageId:
+      'v1674029853/PC_Creative%20refresh/3D_bau/banners_new/Paniyaram.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80474?collection_id=80474&tags=layout_ux4&type=rcv2',
+      text: 'Paniyaram',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurant curated for paniyaram',
+      altTextCta: 'open'
+    },
+    entityId: '80474',
+    frequencyCapping: {}
+  },
+  {
+    id: '750605',
+    imageId: 'rng/md/carousel/production/cbb85a3c1684891105294d11f8359996',
+    action: {
+      link: 'https://www.swiggy.com/collections/80494?collection_id=80494&tags=layout_CCS_Tea&type=rcv2',
+      text: 'Tea',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurants curated for tea',
+      altTextCta: 'open'
+    },
+    entityId: 'swiggy://collectionV2?collection_id=80494&tags=layout_CCS_Tea',
+    frequencyCapping: {}
+  },
+  {
+    id: '750230',
+    imageId: 'v1674029860/PC_Creative%20refresh/3D_bau/banners_new/Samosas.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80397?collection_id=80397&tags=layout_BAU_Contextual%2Csamosa&type=rcv2',
+      text: 'Samosa',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurants curated for samosa',
+      altTextCta: 'open'
+    },
+    entityId: '80397',
+    frequencyCapping: {}
+  },
+  {
+    id: '750217',
+    imageId:
+      'v1674029854/PC_Creative%20refresh/3D_bau/banners_new/Pav_Bhaji.png',
+    action: {
+      link: 'https://www.swiggy.com/collections/80364?collection_id=80364&tags=layout_PavBhaji_Contextual&type=rcv2',
+      text: 'Pav Bhaji',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'restaurant curated for pav bhaji',
+      altTextCta: 'open'
+    },
+    entityId:
+      'swiggy://collectionV2?collection_id=80364&tags=layout_PavBhaji_Contextual',
+    frequencyCapping: {}
+  }
+];
+
 const locations = [
   'chennai',
   'mumbai',
@@ -1862,9 +2198,9 @@ footer
 */
 
 const LocationNames = ({ array }) =>
-  array.map((x, index) => (
-    <option key={index} className="header__options" value={x}>
-      {x}
+  array.map(place => (
+    <option key={place} className="header__options" value={place}>
+      {place}
     </option>
   ));
 
@@ -1906,7 +2242,17 @@ const Header = () => {
 };
 
 const CarouselSlide = () => {};
-const SmallCarouselItem = () => {};
+const SmallCarouselItem = object => {
+  return (
+    <div className="sm-carousel__img-container">
+      <img
+        className="sm-carousel__img"
+        src={`https://media-assets.swiggy.com/${object.object.imageId}`}
+        alt="food"
+      />
+    </div>
+  );
+};
 
 const Carousel = () => (
   <div className="carousel container">
@@ -1932,7 +2278,10 @@ const SmallCarousel = () => (
   <div className="sm-carousel container">
     <h1 className="sm-carousel-title">What's in your mind?</h1>
     <div className="sm-carousel__container">
-      <div className="sm-carousel__img-container">
+      {carouselList.map(item => (
+        <SmallCarouselItem key={item.id} object={item} />
+      ))}
+      {/* <div className="sm-carousel__img-container">
         <img
           className="sm-carousel__img"
           src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/Biryani_2.png"
@@ -1973,7 +2322,7 @@ const SmallCarousel = () => (
           src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/North_Indian_4.png"
           alt="food"
         />
-      </div>
+      </div> */}
     </div>
   </div>
 );
@@ -2010,16 +2359,6 @@ const Card = prop => {
     ? aggregatedDiscountInfoV3.subHeader
     : '';
 
-  console.log(
-    name,
-    cloudinaryImageId,
-    cuisines.join(', '),
-    avgRating,
-    totalRatingsString,
-    discount1,
-    discount2
-  );
-
   return (
     <div className="card">
       <div className="card__img-container">
@@ -2047,7 +2386,7 @@ const Card = prop => {
 
 const CardContainer = () => (
   <div className="restaurant-container container">
-    {data.map(restaurant => (
+    {restaurantList.map(restaurant => (
       <Card key={restaurant.info.id} restaurantObject={restaurant?.info} />
     ))}
   </div>

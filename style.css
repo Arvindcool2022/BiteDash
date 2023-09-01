@@ -137,11 +137,19 @@ body {
 
 .sm-carousel__container {
     display: flex;
+    overflow: hidden;
+}
 
+.sm-carousel__img-container{
+    min-width: 190px;
+    aspect-ratio: 1/1;
+    /* border: 1px black solid; */
 }
 
 .sm-carousel__img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     cursor: pointer;
 }
 
