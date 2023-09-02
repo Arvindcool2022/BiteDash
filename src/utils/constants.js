@@ -12,6 +12,91 @@ const LOCATIONS = [
 
 const CAROUSEL_DATA = [
   {
+    id: '1230658',
+    imageId: 'rng/md/carousel/production/c4a2950873022ef44bd0c8cc618569b2',
+    action: {
+      link: 'https://www.swiggy.com/collections/91153?collection_id=91153&header_title=Swiggy+Weekends&tags=layout_foodcampaign&type=rcv2',
+      text: 'Tropical_IM',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'FREE DELIVERY',
+      altTextCta: 'ORDER NOW'
+    },
+    entityId:
+      'swiggy://collectionV2?collection_id=91153&tags=layout_foodcampaign&header_title=Swiggy%20Weekends',
+    frequencyCapping: {}
+  },
+  {
+    id: '1226810',
+    imageId: 'rng/md/carousel/production/930446fda5aed5c1ceac0f058971f851',
+    action: {
+      link: 'https://www.swiggy.com/menu/17830',
+      text: 'KFC',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'KFC',
+      altTextCta: 'Order Now'
+    },
+    entityId: '17830',
+    frequencyCapping: {}
+  },
+  {
+    id: '1226842',
+    imageId: 'rng/md/carousel/production/d4cd7ac8ae2639c7c4b8942ef59b41ab',
+    action: {
+      link: 'https://www.swiggy.com/collections/94456?collection_id=94456&tags=layout_ux4&type=rcv2',
+      text: 'Lunch',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'GOURMET Swiggy Weekends',
+      altTextCta: 'order now'
+    },
+    entityId: '94456',
+    frequencyCapping: {}
+  },
+  {
+    id: '1226878',
+    imageId: 'rng/md/carousel/production/d86ad1ae666e79d3d4b54b23195ad690',
+    action: {
+      link: 'https://www.swiggy.com/menu/654247',
+      text: 'The Bowl Company',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'The Bowl Company',
+      altTextCta: 'Order Now'
+    },
+    entityId: '654247',
+    frequencyCapping: {}
+  },
+  {
+    id: '1229681',
+    imageId: 'rng/md/carousel/production/gizmjgqs6octatgricdx',
+    action: {
+      link: 'https://www.swiggy.com/menu/256894',
+      text: 'MCD',
+      type: 'WEBLINK'
+    },
+    entityType: 'BANNER',
+    accessibility: {
+      altText: 'Free McVeggie',
+      altTextCta: 'Order Now'
+    },
+    entityId: '256894',
+    frequencyCapping: {},
+    isManualAds: true
+  }
+];
+
+const SMALL_CAROUSEL_DATA = [
+  {
     id: '750132',
     imageId: 'v1674029850/PC_Creative%20refresh/3D_bau/banners_new/Dosa.png',
     action: {
@@ -2159,7 +2244,1290 @@ const RESTAURANT_DATA = [
       link: 'https://www.swiggy.com/restaurants/lunchbox-meals-and-thalis-mudichur-road-tambaram-chennai-152519',
       type: 'WEBLINK'
     }
+  },
+  {
+    info: {
+      id: '754874',
+      name: 'Daalchini',
+      cloudinaryImageId: '8a28ddb5e48a6cd7e37e0e9d501938b2',
+      locality: 'Gst Road',
+      areaName: 'POTHERI',
+      costForTwo: '₹350 for two',
+      cuisines: ['Tandoor', 'Chettinad', 'Continental', 'Indian'],
+      avgRating: 5,
+      feeDetails: {
+        restaurantId: '754874',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '16941',
+      avgRatingString: '5.0',
+      totalRatingsString: '7',
+      sla: {
+        deliveryTime: 23,
+        lastMileTravel: 1.7,
+        serviceability: 'SERVICEABLE',
+        slaString: '23 mins',
+        lastMileTravelString: '1.7 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-02 23:00:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/daalchini-gst-road-potheri-chennai-754874',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '129129',
+      name: 'Spoons Restaurant - Kerala halal food zone',
+      cloudinaryImageId: 'urchxfynl4zsw5iwqvjs',
+      locality: 'Potheri',
+      areaName: 'Srm Nagar',
+      costForTwo: '₹200 for two',
+      cuisines: [
+        'Kerala',
+        'Chinese',
+        'South Indian',
+        'North Indian',
+        'Biryani',
+        'Indian'
+      ],
+      avgRating: 4,
+      feeDetails: {
+        restaurantId: '129129',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '192806',
+      avgRatingString: '4.0',
+      totalRatingsString: '1K+',
+      sla: {
+        deliveryTime: 18,
+        lastMileTravel: 2.5,
+        serviceability: 'SERVICEABLE',
+        slaString: '18 mins',
+        lastMileTravelString: '2.5 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-02 22:00:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        header: '60% OFF',
+        subHeader: 'UPTO ₹120',
+        discountTag: 'FOR YOU',
+        headerTypeV2: 'HEADER_TYPE_V2_TOP_UP',
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/spoons-restaurant-kerala-halal-food-zone-potheri-srm-nagar-chennai-129129',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '543318',
+      name: 'Alagappa Chettinadu Restaurant',
+      cloudinaryImageId: 'jmgdqh2nflo1ccmasl28',
+      locality: 'Opp Guduvanchery',
+      areaName: 'Urapakkam',
+      costForTwo: '₹160 for two',
+      cuisines: ['Chettinad', 'South Indian', 'Beverages'],
+      avgRating: 4,
+      feeDetails: {
+        restaurantId: '543318',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '17457',
+      avgRatingString: '4.0',
+      totalRatingsString: '1K+',
+      sla: {
+        deliveryTime: 16,
+        lastMileTravel: 0.9,
+        serviceability: 'SERVICEABLE',
+        slaString: '16 mins',
+        lastMileTravelString: '0.9 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-02 23:00:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        header: '20% OFF',
+        subHeader: 'ABOVE ₹700',
+        discountTag: 'FLAT DEAL',
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/alagappa-chettinadu-restaurant-opp-guduvanchery-urapakkam-chennai-543318',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '413232',
+      name: 'Suki Kolambu Kadai',
+      cloudinaryImageId: 'x4xgdy94va6jpe6ercq1',
+      locality: 'Urapakkam',
+      areaName: 'Guduvancheri',
+      costForTwo: '₹200 for two',
+      cuisines: ['Indian'],
+      avgRating: 4.2,
+      feeDetails: {
+        restaurantId: '413232',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '256371',
+      avgRatingString: '4.2',
+      totalRatingsString: '1K+',
+      sla: {
+        deliveryTime: 14,
+        lastMileTravel: 1.2,
+        serviceability: 'SERVICEABLE',
+        slaString: '14 mins',
+        lastMileTravelString: '1.2 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-02 15:30:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/suki-kolambu-kadai-urapakkam-guduvancheri-chennai-413232',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '76818',
+      name: 'LunchBox - Meals and Thalis',
+      cloudinaryImageId: 'hfkugtzcckdozguzlutp',
+      locality: 'GST Road',
+      areaName: 'Srm Nagar',
+      costForTwo: '₹200 for two',
+      cuisines: [
+        'Biryani',
+        'North Indian',
+        'Punjabi',
+        'Healthy Food',
+        'Desserts',
+        'Beverages'
+      ],
+      avgRating: 4.2,
+      feeDetails: {
+        restaurantId: '76818',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '4925',
+      avgRatingString: '4.2',
+      totalRatingsString: '5K+',
+      sla: {
+        deliveryTime: 26,
+        lastMileTravel: 2.3,
+        serviceability: 'SERVICEABLE',
+        slaString: '26 mins',
+        lastMileTravelString: '2.3 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-03 02:00:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/lunchbox-meals-and-thalis-gst-road-srm-nagar-chennai-76818',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '70859',
+      name: 'Golcondas',
+      cloudinaryImageId: 'ay4bwzmyuclbz30ijbli',
+      locality: 'OMR Food Street',
+      areaName: 'Guduvancheri',
+      costForTwo: '₹500 for two',
+      cuisines: ['Hyderabadi', 'Andhra', 'North Indian'],
+      avgRating: 4.2,
+      feeDetails: {
+        restaurantId: '70859',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '8878',
+      avgRatingString: '4.2',
+      totalRatingsString: '1K+',
+      sla: {
+        deliveryTime: 27,
+        lastMileTravel: 2.5,
+        serviceability: 'SERVICEABLE',
+        slaString: '27 mins',
+        lastMileTravelString: '2.5 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-02 23:00:00',
+        opened: true
+      },
+      badges: {
+        textExtendedBadges: [
+          {
+            iconId: 'guiltfree/GF_Logo_android_3x',
+            shortDescription: 'options available',
+            fontColor: '#7E808C'
+          }
+        ]
+      },
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: '',
+                  fontColor: '#7E808C',
+                  iconId: 'guiltfree/GF_Logo_android_3x',
+                  shortDescription: 'options available'
+                }
+              }
+            ]
+          }
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        header: '20% OFF',
+        subHeader: 'UPTO ₹50',
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/golcondas-omr-food-street-guduvancheri-chennai-70859',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '753650',
+      name: 'JUICE MAGIC',
+      cloudinaryImageId: '0a7d7369dd339e294220e5e9f8a092dc',
+      locality: 'GST Road',
+      areaName: 'POTHERI',
+      costForTwo: '₹300 for two',
+      cuisines: ['Juices'],
+      feeDetails: {
+        restaurantId: '753650',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '12529',
+      avgRatingString: '--',
+      sla: {
+        deliveryTime: 22,
+        lastMileTravel: 2.2,
+        serviceability: 'SERVICEABLE',
+        slaString: '22 mins',
+        lastMileTravelString: '2.2 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-02 23:59:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/juice-magic-gst-road-potheri-chennai-753650',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '387615',
+      name: 'Madurai Sri Muniyandi Vilas',
+      cloudinaryImageId: 'fhveob5pub2fy75eta1c',
+      locality: 'Gst Road',
+      areaName: 'Guduvanchery',
+      costForTwo: '₹200 for two',
+      cuisines: ['Chinese', 'Seafood'],
+      avgRating: 4.1,
+      feeDetails: {
+        restaurantId: '387615',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '129078',
+      avgRatingString: '4.1',
+      totalRatingsString: '100+',
+      sla: {
+        deliveryTime: 15,
+        lastMileTravel: 1.8,
+        serviceability: 'SERVICEABLE',
+        slaString: '15 mins',
+        lastMileTravelString: '1.8 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-02 16:00:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/madurai-sri-muniyandi-vilas-gst-road-guduvanchery-chennai-387615',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '138203',
+      name: 'Krishna Bhavan',
+      cloudinaryImageId: 'n0fwjyfo6wpmujduentk',
+      locality: 'GST Road',
+      areaName: 'Urapakkam',
+      costForTwo: '₹250 for two',
+      cuisines: ['South Indian', 'North Indian'],
+      avgRating: 4.3,
+      veg: true,
+      feeDetails: {
+        restaurantId: '138203',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '17261',
+      avgRatingString: '4.3',
+      totalRatingsString: '5K+',
+      sla: {
+        deliveryTime: 16,
+        lastMileTravel: 0.9,
+        serviceability: 'SERVICEABLE',
+        slaString: '16 mins',
+        lastMileTravelString: '0.9 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-02 23:00:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/krishna-bhavan-gst-road-urapakkam-chennai-138203',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '45290',
+      name: 'Oxygen',
+      cloudinaryImageId: 'ihmmy6qqcln0yaebomwj',
+      locality: 'POTHERI',
+      areaName: 'Samundeeshweri Nagar',
+      costForTwo: '₹200 for two',
+      cuisines: [
+        'Biryani',
+        'Chettinad',
+        'Chinese',
+        'Grill',
+        'North Indian',
+        'Tandoor'
+      ],
+      avgRating: 3.9,
+      feeDetails: {
+        restaurantId: '45290',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '11462',
+      avgRatingString: '3.9',
+      totalRatingsString: '10K+',
+      sla: {
+        deliveryTime: 21,
+        lastMileTravel: 2.6,
+        serviceability: 'SERVICEABLE',
+        slaString: '21 mins',
+        lastMileTravelString: '2.6 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-03 00:00:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        header: '₹125 OFF',
+        subHeader: 'ABOVE ₹249',
+        discountTag: 'FLAT DEAL',
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/oxygen-potheri-samundeeshweri-nagar-chennai-45290',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '173224',
+      name: 'Disco Biriyani',
+      cloudinaryImageId: 'xirbc6v3zscmyj1tfc04',
+      locality: 'Guduvanchery',
+      areaName: 'Urapakkam',
+      costForTwo: '₹300 for two',
+      cuisines: ['Indian'],
+      avgRating: 4,
+      feeDetails: {
+        restaurantId: '173224',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '73353',
+      avgRatingString: '4.0',
+      totalRatingsString: '1K+',
+      sla: {
+        deliveryTime: 16,
+        lastMileTravel: 2.6,
+        serviceability: 'SERVICEABLE',
+        slaString: '16 mins',
+        lastMileTravelString: '2.6 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-03 00:00:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        header: '10% OFF',
+        subHeader: 'ABOVE ₹159',
+        discountTag: 'FLAT DEAL',
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/disco-biriyani-guduvanchery-urapakkam-chennai-173224',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '57865',
+      name: 'Al Sham',
+      cloudinaryImageId: 'f9k9ihl1lxc6znvmrfm6',
+      locality: 'Guduvancherry',
+      areaName: 'Jaibeemnagar',
+      costForTwo: '₹400 for two',
+      cuisines: ['Chinese', 'North Indian', 'South Indian'],
+      avgRating: 4.1,
+      feeDetails: {
+        restaurantId: '57865',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '5435',
+      avgRatingString: '4.1',
+      totalRatingsString: '10K+',
+      sla: {
+        deliveryTime: 24,
+        lastMileTravel: 1.8,
+        serviceability: 'SERVICEABLE',
+        slaString: '24 mins',
+        lastMileTravelString: '1.8 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-02 23:00:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/al-sham-guduvancherry-jaibeemnagar-chennai-57865',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '191483',
+      name: 'The Biryani Life',
+      cloudinaryImageId: 'j58x8jz8stssyyml28zh',
+      locality: 'GST Road',
+      areaName: 'Srm Nagar',
+      costForTwo: '₹250 for two',
+      cuisines: [
+        'Biryani',
+        'Mughlai',
+        'Lucknowi',
+        'Hyderabadi',
+        'Kebabs',
+        'Desserts',
+        'Beverages'
+      ],
+      avgRating: 3.7,
+      feeDetails: {
+        restaurantId: '191483',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '8496',
+      avgRatingString: '3.7',
+      totalRatingsString: '500+',
+      sla: {
+        deliveryTime: 26,
+        lastMileTravel: 2.3,
+        serviceability: 'SERVICEABLE',
+        slaString: '26 mins',
+        lastMileTravelString: '2.3 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-03 02:00:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/the-biryani-life-gst-road-srm-nagar-chennai-191483',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
+  },
+  {
+    info: {
+      id: '263730',
+      name: 'Shravan Specials by Lunchbox',
+      cloudinaryImageId: 'mbqomptvjgi9xyoqg75j',
+      locality: 'GST Road',
+      areaName: 'Srm Nagar',
+      costForTwo: '₹200 for two',
+      cuisines: ['Biryani', 'North Indian', 'Desserts', 'Beverages'],
+      avgRating: 4.2,
+      veg: true,
+      feeDetails: {
+        restaurantId: '263730',
+        fees: [
+          {
+            name: 'BASE_DISTANCE',
+            fee: 3200
+          },
+          {
+            name: 'BASE_TIME'
+          },
+          {
+            name: 'ANCILLARY_SURGE_FEE'
+          }
+        ],
+        totalFee: 3200
+      },
+      parentId: '21938',
+      avgRatingString: '4.2',
+      totalRatingsString: '100+',
+      sla: {
+        deliveryTime: 22,
+        lastMileTravel: 2.3,
+        serviceability: 'SERVICEABLE',
+        slaString: '22 mins',
+        lastMileTravelString: '2.3 km',
+        iconType: 'ICON_TYPE_EMPTY'
+      },
+      availability: {
+        nextCloseTime: '2023-09-03 02:00:00',
+        opened: true
+      },
+      badges: {},
+      isOpen: true,
+      type: 'F',
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {}
+        }
+      },
+      aggregatedDiscountInfoV3: {
+        header: '50% OFF',
+        subHeader: 'UPTO ₹100',
+        discountCalloutInfo: {
+          message: 'Free Delivery',
+          logoCtx: {
+            logo: 'v1655895371/free_delivery_logo_hqipbo.png'
+          }
+        }
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {}
+      },
+      differentiatedUi: {
+        displayType: 'ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT',
+        differentiatedUiMediaDetails: {
+          mediaType: 'ADS_MEDIA_ENUM_IMAGE',
+          lottie: {},
+          video: {}
+        }
+      },
+      reviewsSummary: {},
+      displayType: 'RESTAURANT_DISPLAY_TYPE_DEFAULT',
+      restaurantOfferPresentationInfo: {}
+    },
+    analytics: {
+      context: 'seo-data-a8313223-7149-4aa7-87b4-5c18cd8068ff'
+    },
+    cta: {
+      link: 'https://www.swiggy.com/restaurants/shravan-specials-by-lunchbox-gst-road-srm-nagar-chennai-263730',
+      text: 'RESTAURANT_MENU',
+      type: 'WEBLINK'
+    },
+    widgetId: 'collectionV5RestaurantListWidget_SimRestoRelevance_food_seo'
   }
 ];
 
-export { LOCATIONS, CAROUSEL_DATA, RESTAURANT_DATA };
+export { LOCATIONS, CAROUSEL_DATA, SMALL_CAROUSEL_DATA, RESTAURANT_DATA };

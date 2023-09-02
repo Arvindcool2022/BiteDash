@@ -99,7 +99,7 @@ body {
 }
 
 .header__btn> .bi {
-    margin-right:0.5rem;
+    margin-right:0.25rem;
     fill: orangered;
 } 
 
@@ -120,16 +120,29 @@ body {
     margin-block: 4rem;
 }
 
+@media screen and (max-width:500px) {
+    .container{
+        width: 100%;
+    }
+    
+}
+
 /*! CAROUSEL  */
 
 
 .carousel__container {
     display: flex;
     gap: .75rem;
+    overflow: hidden;
+}
+.carousel__img-container{
+    min-width: 450px;
+    /* width: 45%; */
 }
 
 .carousel__img {
     width: 100%;
+    object-fit: cover;
     cursor: pointer;
 }
 
@@ -206,6 +219,7 @@ font-size: .75rem;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 2rem;
     justify-content: center;
+    justify-items: center;
 }
 
 /*! restaurant cards*/

@@ -1,11 +1,11 @@
-import { CAROUSEL_DATA } from '../../utils/constants';
+import { SMALL_CAROUSEL_DATA } from '../../utils/constants';
 import SmallCarouselItem from './SmallCarouselItem';
 
 const SmallCarousel = () => (
   <div className="sm-carousel container">
     <h1 className="sm-carousel-title">What's in your mind?</h1>
     <div className="sm-carousel__container">
-      {CAROUSEL_DATA.map(item => (
+      {SMALL_CAROUSEL_DATA.map(item => (
         <SmallCarouselItem key={item.id} object={item} />
       ))}
       {/* <div className="sm-carousel__img-container">
