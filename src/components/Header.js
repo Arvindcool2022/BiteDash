@@ -13,7 +13,7 @@ const Header = () => {
     <header className="header">
       <div className="header__brand">
         <img className="header__logo" src={logo} alt="logo" />
-        <h3 className="header__brand-name">dash door</h3>
+        <h3 className="header__brand-name">Bite Dash</h3>
         <select className="header__drop-down" name="location">
           <LocationNames array={LOCATIONS} />
         </select>

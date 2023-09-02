@@ -153,6 +153,52 @@ body {
     cursor: pointer;
 }
 
+/*! Filters*/
+
+
+
+.filters {
+    border-top:1px rgba(0, 0, 0, 0.167) solid ;
+    border-bottom:1px rgba(0, 0, 0, 0.167) solid ;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    font-size: 1rem;
+}
+
+.searchBar, .btn {
+    padding:1rem 1.25rem;
+    border-radius: 500px;
+    outline: 1px  rgba(252, 161, 100, 0.5) solid ;
+    border: none;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.075);
+}
+
+.searchBar {
+    background-color:  rgba(252, 161, 100, 0.15);
+}
+
+.searchBar:focus {
+    background-color: rgba(252, 161, 100, 0.5);
+}
+
+.btn {
+    background-color: transparent;
+}
+
+.btn:active {
+    background-color:  rgba(252, 161, 100, 0.5);
+    box-shadow: none;
+}
+
+.btn--filter .bi {
+font-size: .75rem;
+}
+
+
+
+
 /*! restaurant container*/
 
 .restaurant-container {
@@ -169,6 +215,7 @@ body {
     border-radius: 12px;
     cursor: pointer;
     transition: all 150ms ease;
+    max-width: 300px;
 }
 
 .card:hover{

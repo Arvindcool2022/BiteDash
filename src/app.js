@@ -4,14 +4,25 @@ import ReactDom from 'react-dom/client';
 import Header from './components/Header';
 import MainSection from './components/MainSection.js';
 import Footer from './components/Footer';
-
-const AppLayout = () => (
-  <div id="layout">
-    <Header />
-    <MainSection />
-    <Footer />
-  </div>
-);
+const AppLayout = () => {
+  return (
+    <div id="AppLayout">
+      <Header />
+      <MainSection />
+      <Footer />
+    </div>
+  );
+};
+const AppLayout2 = () => {
+  return (
+    <div id="AppLayout">
+      {Header()}
+      <MainSection />
+      {Footer()}
+    </div>
+  );
+};
+console.log(AppLayout2());
 
 const root = ReactDom.createRoot(document.getElementById('root'));
 root.render(<AppLayout />);
