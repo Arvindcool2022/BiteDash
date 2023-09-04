@@ -1,3 +1,5 @@
+// all mock datas
+
 const LOCATIONS = [
   'chennai',
   'mumbai',

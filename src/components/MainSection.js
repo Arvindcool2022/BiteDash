@@ -3,7 +3,7 @@ import SmallCarousel from './MainSection/SmallCarousel';
 import Filters from './MainSection/Filters';
 import CardContainer from './MainSection/CardContainer';
 import { RESTAURANT_DATA } from '../utils/constants';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const MainSection = () => {
   const [resList, setResList] = useState(RESTAURANT_DATA);
