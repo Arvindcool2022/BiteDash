@@ -40,8 +40,8 @@ const Filters = ({ listOfRestaurant, cb, initialList }) => {
         <button
           className="btn btn--reset"
           onClick={() => {
-            document.querySelector('.searchBar').value = '';
             setSearchValue(''); // this is not reseting the actual search box in browser
+            document.querySelector('.searchBar').value = ''; // this is
             cb(initialList);
           }}
         >

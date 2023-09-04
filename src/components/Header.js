@@ -1,5 +1,4 @@
 import logo from '../utils/delivery app logo.svg';
-import { LOCATIONS } from '../utils/constants';
 
 const LocationNames = ({ array }) =>
   array.map(place => (
@@ -8,14 +7,14 @@ const LocationNames = ({ array }) =>
     </option>
   ));
 
-const Header = () => {
+const Header = ({ locationList }) => {
   return (
     <header className="header">
       <div className="header__brand">
         <img className="header__logo" src={logo} alt="logo" />
         <h3 className="header__brand-name">Bite Dash</h3>
         <select className="header__drop-down" name="location">
-          <LocationNames array={LOCATIONS} />
+          <LocationNames array={locationList} />
         </select>
       </div>
       <ul className="header__nav-list">
