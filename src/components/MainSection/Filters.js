@@ -1,16 +1,27 @@
 import { useState } from 'react';
-import Card from './Card';
 
-const Filters = ({ listOfRestaurant, cb, initialList }) => {
-  // const { listOfRestaurant, cb, initialList } = prop;
-  const [searchValue, setSearchValue] = useState('');
+const Filters = ({ listOfRestaurant, theFilteredList, initialList }) => {
+  const [none, triggerRender] = useState('');
+
   const searchItem = e => {
-    setSearchValue(e.target.value);
-    cb(
-      initialList.filter(item =>
-        item?.info.name.toLowerCase().includes(e.target.value.toLowerCase())
-      )
+    triggerRender(e.target.value);
+    let filteredList = initialList.filter(item =>
+      item?.info.name.toLowerCase().includes(e.target.value.toLowerCase())
     );
+    theFilteredList(filteredList);
+  };
+
+  const topRating = () => {
+    const filteredList = listOfRestaurant.filter(
+      item => item?.info.avgRating >= 4
+    );
+    theFilteredList(filteredList);
+  };
+
+  const resetALL = () => {
+    triggerRender(''); // this is not reseting the actual search box in browser
+    document.querySelector('.searchBar').value = ''; // this is
+    theFilteredList(initialList);
   };
 
   return (
@@ -25,26 +36,11 @@ const Filters = ({ listOfRestaurant, cb, initialList }) => {
           placeholder="Search..."
           onChange={searchItem}
         />
-        <button
-          className="btn btn--filter"
-          onClick={() => {
-            const filteredList = listOfRestaurant.filter(
-              item => item?.info.avgRating >= 4.2
-            );
-            cb(filteredList);
-          }}
-        >
+        <button className="btn btn--filter" onClick={topRating}>
           {' '}
-          4.2+ <i className="bi bi-star-fill"></i> rating
+          4+ <i className="bi bi-star-fill"></i> rating
         </button>
-        <button
-          className="btn btn--reset"
-          onClick={() => {
-            setSearchValue(''); // this is not reseting the actual search box in browser
-            document.querySelector('.searchBar').value = ''; // this is
-            cb(initialList);
-          }}
-        >
+        <button className="btn btn--reset" onClick={resetALL}>
           {' '}
           reset
         </button>

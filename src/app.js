@@ -1,21 +1,21 @@
 import ReactDom from 'react-dom/client';
 
+// import Skeleton,{ SkeletonTheme } from 'react-loading-skeleton';
+// import 'react-loading-skeleton/dist/skeleton.css';
+
 import { LOCATIONS } from './utils/constants';
 
 import Header from './components/Header';
 import MainSection from './components/MainSection.js';
 import Footer from './components/Footer';
 
-const AppLayout = () => {
-  console.log(LOCATIONS);
-  return (
-    <div id="AppLayout">
-      <Header locationList={LOCATIONS} />
-      <MainSection />
-      <Footer />
-    </div>
-  );
-};
+const AppLayout = () => (
+  <div id="AppLayout">
+    <Header locationList={LOCATIONS} />
+    <MainSection />
+    <Footer />
+  </div>
+);
 
 const root = ReactDom.createRoot(document.getElementById('root'));
 root.render(<AppLayout />);

@@ -3,21 +3,21 @@
   "version": "1.0.0",
   "description": "learning React JS from Namaste JS",
   "scripts": {
-    "test" : "jest",
+    "test": "jest",
     "start": "parcel index.html",
     "build": "parcel build index.html"
-  }, 
-    "//": {
-      "this is a" : "comment section",
-      "npx start" : "not working",
-      "npx build" : "not working",
-      "npm build" : "not working",
-      "npm start" : "working",
-      "npm run start" : "working",
-      "npm run build": "working",
-      "npx parcel index.html" : "working",
-      "npx parcel build index.html":"working"
-    },
+  },
+  "//": {
+    "this is a": "comment section",
+    "npx start": "not working",
+    "npx build": "not working",
+    "npm build": "not working",
+    "npm start": "working",
+    "npm run start": "working",
+    "npm run build": "working",
+    "npx parcel index.html": "working",
+    "npx parcel build index.html": "working"
+  },
   "repository": {
     "type": "git",
     "url": "(https://github.com/Arvindcool2022/Learn-React.js.git)"
@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-loading-skeleton": "^3.3.1"
   },
   "browserslists": [
     "last 5 versions"
