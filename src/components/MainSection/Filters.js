@@ -1,27 +1,28 @@
 import { useState } from 'react';
 
-const Filters = ({ listOfRestaurant, theFilteredList, initialList }) => {
-  const [none, triggerRender] = useState('');
+const Filters = ({ listOfRestaurant, filterResult, initialList }) => {
+  const [searchValue, setSearchValue] = useState('');
 
   const searchItem = e => {
-    triggerRender(e.target.value);
+    let value = e.target.value;
+    setSearchValue(value); // to update in ui
+
     let filteredList = initialList.filter(item =>
       item?.info.name.toLowerCase().includes(e.target.value.toLowerCase())
     );
-    theFilteredList(filteredList);
+    filterResult(filteredList);
   };
 
   const topRating = () => {
     const filteredList = listOfRestaurant.filter(
       item => item?.info.avgRating >= 4
     );
-    theFilteredList(filteredList);
+    filterResult(filteredList);
   };
 
   const resetALL = () => {
-    triggerRender(''); // this is not reseting the actual search box in browser
-    document.querySelector('.searchBar').value = ''; // this is
-    theFilteredList(initialList);
+    setSearchValue('');
+    filterResult(initialList);
   };
 
   return (
@@ -33,6 +34,7 @@ const Filters = ({ listOfRestaurant, theFilteredList, initialList }) => {
         <input
           className="searchBar"
           type="search"
+          value={searchValue}
           placeholder="Search..."
           onChange={searchItem}
         />

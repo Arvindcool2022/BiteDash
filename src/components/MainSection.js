@@ -57,12 +57,15 @@ const MainSection = () => {
     })();
   }, []);
 
-  return (
+  return (resList.length || smallCarouselList.length || carouselList.length) ===
+    0 ? (
+    <h1>loading...</h1>
+  ) : (
     <section className="main-section">
       <Carousel carouselData={carouselList} />
       <SmallCarousel smallCarouselData={smallCarouselList} />
       <Filters
-        theFilteredList={setResList}
+        filterResult={setResList}
         listOfRestaurant={resList}
         initialList={filterList}
       />
