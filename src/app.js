@@ -1,7 +1,5 @@
 import ReactDom from 'react-dom/client';
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
-// import Skeleton,{ SkeletonTheme } from 'react-loading-skeleton';
-// import 'react-loading-skeleton/dist/skeleton.css';
 
 import { LOCATIONS } from './utils/constants';
 

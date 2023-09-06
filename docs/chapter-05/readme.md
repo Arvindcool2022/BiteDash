@@ -191,3 +191,17 @@ The `useState` hook is an essential part of React because it enables functional 
 8. **Hooks Ecosystem**: The introduction of hooks has led to a vibrant ecosystem of custom hooks that can simplify common tasks. These custom hooks often build on top of `useState` to offer higher-level abstractions for managing specific types of state.
 
 In summary, the `useState` hook is a fundamental part of React that enables functional components to handle local state management effectively. It promotes clean, maintainable code and aligns with React's principles of immutability and declarative UI updates.
+
+### PITFALL:
+
+```javascript
+//BEWARE
+function handleClick() {
+  setName('Robin');
+  console.log(name); // Still "Taylor"!
+}
+```
+
+- The set function only updates the state variable for the next render. If you read the state variable after calling the set function, you will still get the old value that was on the screen before your call.
+
+[docs](https://react.dev/reference/react/useState#setstate-caveats)
