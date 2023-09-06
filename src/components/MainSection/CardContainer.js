@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Card from './Card';
+import { Link } from 'react-router-dom';
 
 const CardContainer = ({ listOfRestaurant }) => {
   return listOfRestaurant.length === 0 ? (
@@ -16,7 +17,9 @@ const CardContainer = ({ listOfRestaurant }) => {
   ) : (
     <div className="restaurant-container container">
       {listOfRestaurant.map(restaurant => (
-        <Card key={restaurant.info.id} restaurantObject={restaurant?.info} />
+        <Link key={restaurant.info.id} to={'/res/' + restaurant.info.id}>
+          <Card restaurantObject={restaurant?.info} />
+        </Link>
       ))}
     </div>
   );

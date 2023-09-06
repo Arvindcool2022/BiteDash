@@ -9,6 +9,11 @@ body {
     margin: 0;
 }
 
+a{
+    text-decoration: none ;
+    color: #333;
+
+}
 /*! HEADER  */
 
 .header {
@@ -224,7 +229,7 @@ font-size: .75rem;
 
 /*! restaurant cards*/
 
-.card {
+.restaurant-container .card {
     padding: 0.5rem;
     border-radius: 12px;
     cursor: pointer;
@@ -232,12 +237,12 @@ font-size: .75rem;
     max-width: 300px;
 }
 
-.card:hover{
+.restaurant-container .card:hover{
     /* box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.075); */
     transform: scale(0.95);
 }
 
-.card__img-container {
+.restaurant-container .card__img-container {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
@@ -249,7 +254,7 @@ font-size: .75rem;
     aspect-ratio: 1/1;
 }
 
-.card__img-container > span {
+.restaurant-container .card__img-container > span {
     font-family: 'Oswald', sans-serif;
     /* webkit-font-smoothing: antialiased; */
     position: absolute;
@@ -264,21 +269,21 @@ font-size: .75rem;
     font-size: 1.5rem;
 }
 
-.card__title {
+.restaurant-container .card__title {
     font-size: 1.25rem;
 }
-.card__body {
+.restaurant-container .card__body {
     font-size: 0.85rem;
 }
 
-.card__detail {
+.restaurant-container .card__detail {
     font-weight: 100;
 }
-.card__votes{
+.restaurant-container .card__votes{
     font-weight: 100;
     color: #666;
     margin-left: 1rem;
 }
-.card__rating>.bi {
+.restaurant-container .card__rating>.bi {
     padding-left: 0.5rem;
 }

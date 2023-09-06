@@ -1,13 +1,18 @@
 import { useEffect, useState } from 'react';
+import MenuCard from './_MenuCard';
+import { useParams } from 'react-router-dom';
 
 const ResPage = () => {
   const [resInfo, setResInfo] = useState([]);
+
+  const { id } = useParams();
 
   useEffect(() => {
     (async function () {
       try {
         const URL =
-          'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.8438835&lng=80.05973639999999&restaurantId=196103&catalog_qa=undefined&submitAction=ENTER';
+          'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.8438835&lng=80.05973639999999&restaurantId=' +
+          id;
         const data = await fetch(URL).catch(e =>
           console.error('Not Fetched : ', e)
         );
@@ -15,8 +20,6 @@ const ResPage = () => {
           throw new Error(`Network response was not ok: ${data.status}`);
         }
         const json = await data.json();
-
-        console.log(json);
         setResInfo(json?.data?.cards);
       } catch (error) {
         console.log(
@@ -28,7 +31,8 @@ const ResPage = () => {
       }
     })();
   }, []);
-  if (!resInfo)
+
+  if (!resInfo) {
     return (
       <h1
         style={{ backgroundColor: 'red', color: 'white', fontStyle: 'italic' }}
@@ -38,11 +42,47 @@ const ResPage = () => {
         your browser.
       </h1>
     );
+  }
 
+  if (resInfo.length === 0) return <h1 className="container">loading...</h1>;
+
+  const {
+    name = 'local restaurant',
+    cuisines,
+    costForTwoMessage: costForTwo,
+    sla: { maxDeliveryTime: deliveryTime },
+    avgRatingString,
+    totalRatingsString
+  } = resInfo[0]?.card?.card?.info;
+
+  let menulist =
+    resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+      ?.itemCards;
+  if (menulist.length > 16) {
+    menulist = menulist.slice(0, 15);
+  }
+  console.log(menulist);
   return (
-    <div>
-      <h1>{resInfo[0]?.card?.card?.info?.name}</h1>
-    </div>
+    <section className="res container">
+      <div className="flex">
+        <div className="res__info-card">
+          <h1 className="res__name">{name}</h1>
+          <p>{cuisines.join(', ')}</p>
+          <h2>{deliveryTime}mins to deliver</h2>
+          <h2> {costForTwo}</h2>
+        </div>
+        <div className="res__rating">
+          <h3>{avgRatingString} rating</h3>
+          <p>{totalRatingsString}</p>
+        </div>
+      </div>
+      <section className="menu container">
+        {menulist.map(item => (
+          <MenuCard key={item?.card?.info?.id} info={item} />
+        ))}
+        {/* <MenuCard info={menulist[0]} /> */}
+      </section>
+    </section>
   );
 };
 
