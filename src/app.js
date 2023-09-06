@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 
 import About from './pages/About';
 import Error from './pages/Error';
+import ResPage from './pages/ResPage';
 
 const AppLayout = () => (
   <div id="AppLayout">
@@ -26,7 +27,8 @@ const AppRouter = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { path: '/', element: <MainSection /> },
-      { path: '/about', element: <About /> }
+      { path: '/about', element: <About /> },
+      { path: '/res/:id', element: <ResPage /> }
     ],
     errorElement: <Error />
   }
