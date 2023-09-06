@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logo from '../utils/delivery app logo.svg';
+import { Link } from 'react-router-dom';
 
 const LocationNames = ({ array }) =>
   array.map(place => (
@@ -28,11 +29,11 @@ const Header = ({ locationList }) => {
         </li>
         <li className="header__nav-items">
           <i className="bi bi-percent"></i>
-          offer
+          <Link to={'/'}>offer</Link>
         </li>
         <li className="header__nav-items">
           <i className="bi bi-info-circle"></i>
-          help
+          <Link to={'/about'}>help</Link>
         </li>
         <li className="header__nav-items" onClick={() => setLogin(!login)}>
           <i className="bi bi-person"></i>

@@ -113,7 +113,7 @@ export default Body;
 
 In summary, the `useEffect` hook is essential in React for managing side effects, handling asynchronous operations, and ensuring that your components interact effectively with the outside world while adhering to the principles of functional programming and component-based architecture.
 
-[Doc](https://react.dev/reference/react/useEffect)
+[Doc](https://react.dev/reference/react/useEffect), [useEffect Hook in React App from scratch](https://medium.com/@svsh227/useeffect-hook-in-react-app-from-scratch-dd48885e9929)
 
 ## Optional chaining
 
