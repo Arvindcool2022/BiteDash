@@ -20,6 +20,7 @@ const ResPage = () => {
           throw new Error(`Network response was not ok: ${data.status}`);
         }
         const json = await data.json();
+        console.log(json.data.cards);
         setResInfo(json?.data?.cards);
       } catch (error) {
         console.log(
@@ -57,6 +58,8 @@ const ResPage = () => {
 
   let menulist =
     resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+      ?.itemCards ||
+    resInfo[1]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
       ?.itemCards;
   if (menulist.length > 16) {
     menulist = menulist.slice(0, 15);
@@ -67,16 +70,18 @@ const ResPage = () => {
       <div className="flex">
         <div className="res__info-card">
           <h1 className="res__name">{name}</h1>
-          <p>{cuisines.join(', ')}</p>
-          <h2>{deliveryTime}mins to deliver</h2>
-          <h2> {costForTwo}</h2>
+          <p className="res__cuisines">{cuisines.join(', ')}</p>
+          <div className="flex">
+            <p className="res__del">{deliveryTime} mins to deliver</p>
+            <p className="res__del"> {costForTwo}</p>
+          </div>
         </div>
         <div className="res__rating">
           <h3>{avgRatingString} rating</h3>
           <p>{totalRatingsString}</p>
         </div>
       </div>
-      <section className="menu container">
+      <section className="menu ">
         {menulist.map(item => (
           <MenuCard key={item?.card?.info?.id} info={item} />
         ))}
