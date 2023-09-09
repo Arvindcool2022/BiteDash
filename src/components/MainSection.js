@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import {
+  SWIGGY_API_URL,
   CAROUSEL_DATA,
   SMALL_CAROUSEL_DATA,
-  RESTAURANT_DATA
+  RESTAURANT_DATA,
+  ALLOW_CORS_ERROR_MSG
 } from '../utils/constants';
 
 import Carousel from './MainSection/Carousel';
@@ -24,46 +26,46 @@ const MainSection = () => {
     setFilterList(RESTAURANT_DATA);
   };
 
+  const extractAndSetData = jsonData => {
+    setCarouselList(
+      jsonData?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info
+    );
+
+    setSmallCarouselList(
+      jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.info
+    );
+
+    setResList(
+      jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
+
+    setFilterList(
+      jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
+
+    console.log(
+      jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants,
+      ' use effect'
+    );
+  };
+
   const fetchSwiggyData = async () => {
     try {
-      const URL =
-        'https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
-      const data = await fetch(URL).catch(e =>
+      const data = await fetch(SWIGGY_API_URL).catch(e =>
         console.error('Not Fetched : ', e)
       );
-      if (!data.ok) {
+
+      if (!data.ok)
         throw new Error(`Network response was not ok: ${data.status}`);
+      else {
+        const json = await data.json();
+        extractAndSetData(json);
       }
-      const json = await data.json();
-
-      setCarouselList(
-        json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info
-      );
-
-      setSmallCarouselList(
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.info
-      );
-
-      setResList(
-        json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-      );
-
-      setFilterList(
-        json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-      );
-
-      console.log(
-        json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants,
-        ' use effect'
-      );
     } catch (error) {
-      console.log(
-        "%cIMPORTANT: Unable to fetch live data from Swiggy due to a CORS issue. To see live data, please install a 'CORS-Allow' extension in your browser.",
-        'color:red;font-family:system-ui;font-size:2rem;font-weight:bold'
-      );
+      console.log(ALLOW_CORS_ERROR_MSG);
       console.error('Error fetching data:', error);
       fallBack();
     }

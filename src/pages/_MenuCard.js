@@ -2,7 +2,10 @@ const MenuCard = ({ info }) => {
   const { name, price, defaultPrice, description, category, imageId } =
     info?.card?.info;
 
-  if (name && (price || defaultPrice) && (description || category) && imageId) {
+  const formattedPrice = price / 100 || defaultPrice / 100;
+  const formattedDescription = description || category;
+
+  if (name && formattedPrice && formattedDescription && imageId) {
     return (
       <div
         className="menu-card flex"
@@ -13,8 +16,8 @@ const MenuCard = ({ info }) => {
       >
         <div className="card__text">
           <h3 className="card__name">{name}</h3>
-          <p className="card__price">Rs.{price / 100 || defaultPrice / 100}</p>
-          <p className="card__description">{description || category}</p>
+          <p className="card__price">Rs.{formattedPrice}</p>
+          <p className="card__description">{formattedDescription}</p>
         </div>
         <div className="card__img-container">
           <img
@@ -31,8 +34,12 @@ const MenuCard = ({ info }) => {
       </div>
     );
   } else {
-    console.log('hit');
-    console.log(name, price, defaultPrice, description, imageId);
+    console.log('Card data is incomplete:', {
+      name,
+      formattedPrice,
+      formattedDescription,
+      imageId
+    });
     return null;
   }
 };

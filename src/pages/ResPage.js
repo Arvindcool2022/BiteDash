@@ -1,36 +1,33 @@
 import { useEffect, useState } from 'react';
-import MenuCard from './_MenuCard';
 import { useParams } from 'react-router-dom';
+import { ALLOW_CORS_ERROR_MSG, RES_URL } from '../utils/constants';
+import MenuCard from './_MenuCard';
 
 const ResPage = () => {
   const [resInfo, setResInfo] = useState([]);
 
   const { id } = useParams();
 
-  useEffect(() => {
-    (async function () {
-      try {
-        const URL =
-          'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.8438835&lng=80.05973639999999&restaurantId=' +
-          id;
-        const data = await fetch(URL).catch(e =>
-          console.error('Not Fetched : ', e)
-        );
-        if (!data.ok) {
-          throw new Error(`Network response was not ok: ${data.status}`);
-        }
-        const json = await data.json();
-        console.log(json.data.cards);
-        setResInfo(json?.data?.cards);
-      } catch (error) {
-        console.log(
-          "%cIMPORTANT: Unable to fetch live data from Swiggy for restaurant details due to a CORS issue. To see live data, please install a 'CORS-Allow' extension in your browser.",
-          'color:red;font-family:system-ui;font-size:2rem;font-weight:bold'
-        );
-        console.error('Error fetching data:', error);
-        setResInfo(false);
+  const fetchData = async () => {
+    try {
+      const URL = RES_URL + id;
+      const data = await fetch(URL).catch(e =>
+        console.error('Not Fetched : ', e)
+      );
+      if (!data.ok) {
+        throw new Error(`Network response was not ok: ${data.status}`);
       }
-    })();
+      const json = await data.json();
+      setResInfo(json?.data?.cards);
+    } catch (error) {
+      console.log(ALLOW_CORS_ERROR_MSG, 'from Restaurant Page');
+      console.error('Error fetching data:', error);
+      setResInfo(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
   }, []);
 
   if (!resInfo) {
@@ -64,7 +61,7 @@ const ResPage = () => {
   if (menulist.length > 16) {
     menulist = menulist.slice(0, 15);
   }
-  console.log(menulist);
+
   return (
     <section className="res container">
       <div className="flex">

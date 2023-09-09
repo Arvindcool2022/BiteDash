@@ -3532,4 +3532,22 @@ const RESTAURANT_DATA = [
   }
 ];
 
-export { LOCATIONS, CAROUSEL_DATA, SMALL_CAROUSEL_DATA, RESTAURANT_DATA };
+const SWIGGY_API_URL =
+  'https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
+
+const RES_URL =
+  'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.8438835&lng=80.05973639999999&restaurantId=';
+
+const ALLOW_CORS_ERROR_MSG =
+  ("%cIMPORTANT: Unable to fetch live data from Swiggy due to a CORS issue. To see live data, please install a 'CORS-Allow' extension in your browser.",
+  'color:red;font-family:system-ui;font-size:2rem;font-weight:bold');
+
+export {
+  LOCATIONS,
+  CAROUSEL_DATA,
+  SMALL_CAROUSEL_DATA,
+  RESTAURANT_DATA,
+  RES_URL,
+  SWIGGY_API_URL,
+  ALLOW_CORS_ERROR_MSG
+};
