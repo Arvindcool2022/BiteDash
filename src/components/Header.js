@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../utils/delivery app logo.svg';
+import logo from '../utils/SVG/delivery app logo.svg';
 import { Link } from 'react-router-dom';
 
 const LocationNames = ({ array }) =>

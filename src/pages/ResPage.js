@@ -1,34 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { ALLOW_CORS_ERROR_MSG, RES_URL } from '../utils/constants';
+import useFetchResPageInfo from '../utils/useFetchResPageInfo';
 import MenuCard from './_MenuCard';
 
 const ResPage = () => {
   const [resInfo, setResInfo] = useState([]);
-
   const { id } = useParams();
-
-  const fetchData = async () => {
-    try {
-      const URL = RES_URL + id;
-      const data = await fetch(URL).catch(e =>
-        console.error('Not Fetched : ', e)
-      );
-      if (!data.ok) {
-        throw new Error(`Network response was not ok: ${data.status}`);
-      }
-      const json = await data.json();
-      setResInfo(json?.data?.cards);
-    } catch (error) {
-      console.log(ALLOW_CORS_ERROR_MSG, 'from Restaurant Page');
-      console.error('Error fetching data:', error);
-      setResInfo(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  useFetchResPageInfo(id, setResInfo);
 
   if (!resInfo) {
     return (
@@ -57,7 +35,10 @@ const ResPage = () => {
     resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
       ?.itemCards ||
     resInfo[1]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+      ?.itemCards ||
+    resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card
       ?.itemCards;
+
   if (menulist.length > 16) {
     menulist = menulist.slice(0, 15);
   }
@@ -82,10 +63,33 @@ const ResPage = () => {
         {menulist.map(item => (
           <MenuCard key={item?.card?.info?.id} info={item} />
         ))}
-        {/* <MenuCard info={menulist[0]} /> */}
       </section>
     </section>
   );
 };
 
 export default ResPage;
+
+//! abstracted to a custom hook => useFetchResPageInfo(resID, setState);
+
+// const fetchData = async () => {
+//   try {
+//     const URL = RES_URL + id;
+//     const data = await fetch(URL).catch(e =>
+//       console.error('Not Fetched : ', e)
+//     );
+//     if (!data.ok) {
+//       throw new Error(`Network response was not ok: ${data.status}`);
+//     }
+//     const json = await data.json();
+//     setResInfo(json?.data?.cards);
+//   } catch (error) {
+//     console.log(ALLOW_CORS_ERROR_MSG, 'from Restaurant Page');
+//     console.error('Error fetching data:', error);
+//     setResInfo(false);
+//   }
+// };
+
+// useEffect(() => {
+//   fetchData();
+// }, []);
