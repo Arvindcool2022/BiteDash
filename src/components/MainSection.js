@@ -11,6 +11,7 @@ import Carousel from './MainSection/Carousel';
 import SmallCarousel from './MainSection/SmallCarousel';
 import Filters from './MainSection/Filters';
 import CardContainer from './MainSection/CardContainer';
+import useOnlineStatus from '../utils/useOnlineStatus';
 
 const MainSection = () => {
   const [carouselList, setCarouselList] = useState([]);
@@ -74,6 +75,16 @@ const MainSection = () => {
   useEffect(() => {
     fetchSwiggyData();
   }, []);
+
+  const onlineStatus = useOnlineStatus();
+
+  if (!onlineStatus)
+    return (
+      <h1 style={{ textAlign: 'center', marginBlock: '5rem' }}>
+        Oops! It seems like there's an issue with your internet connection.
+        Please check your internet connection
+      </h1>
+    );
 
   return !(resList && smallCarouselList && carouselList) ? (
     fallBack() //! if api returns undefined

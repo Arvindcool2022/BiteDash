@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import logo from '../utils/SVG/delivery app logo.svg';
 import { Link } from 'react-router-dom';
+import useOnlineStatus from '../utils/useOnlineStatus';
 
 const LocationNames = ({ array }) =>
   array.map(place => (
@@ -12,6 +13,7 @@ const LocationNames = ({ array }) =>
 const Header = ({ locationList }) => {
   const [login, setLogin] = useState(false);
   const statusKeyWord = login ? 'sign-out' : 'sign-in';
+  const onlineStatus = useOnlineStatus();
 
   return (
     <header className="header">
@@ -25,6 +27,7 @@ const Header = ({ locationList }) => {
         </select>
       </div>
       <ul className="header__nav-list">
+        <li>Online Status : {onlineStatus ? '🟢' : '🔴'}</li>
         <li className="header__nav-items">
           <Link to={'/'}>home</Link>
         </li>
