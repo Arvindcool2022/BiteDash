@@ -9,7 +9,8 @@ import Footer from './components/Footer';
 
 import About from './pages/About';
 import Error from './pages/Error';
-import ResPage from './pages/ResPage';
+import { Suspense, lazy } from 'react';
+const ResPage = lazy(() => import('./pages/ResPage'));
 
 const AppLayout = () => (
   <div id="AppLayout">
@@ -29,7 +30,14 @@ const AppRouter = createBrowserRouter([
         path: '/about',
         element: <About />
       },
-      { path: '/res/:id', element: <ResPage /> }
+      {
+        path: '/res/:id',
+        element: (
+          <Suspense fallback={<h1>loading...</h1>}>
+            <ResPage />
+          </Suspense>
+        )
+      }
     ],
     errorElement: <Error />
   }

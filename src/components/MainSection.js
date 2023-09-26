@@ -11,7 +11,7 @@ import Carousel from './MainSection/Carousel';
 import SmallCarousel from './MainSection/SmallCarousel';
 import Filters from './MainSection/Filters';
 import CardContainer from './MainSection/CardContainer';
-import useOnlineStatus from '../utils/useOnlineStatus';
+import useOnlineStatus from '../hooks/useOnlineStatus';
 
 const MainSection = () => {
   const [carouselList, setCarouselList] = useState([]);

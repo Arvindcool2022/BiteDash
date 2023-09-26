@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import logo from '../utils/SVG/delivery app logo.svg';
 import { Link } from 'react-router-dom';
-import useOnlineStatus from '../utils/useOnlineStatus';
+import useOnlineStatus from '../hooks/useOnlineStatus';
 
 const LocationNames = ({ array }) =>
   array.map(place => (
@@ -25,9 +25,11 @@ const Header = ({ locationList }) => {
         <select className="header__drop-down" name="location">
           <LocationNames array={locationList} />
         </select>
+        <p style={{ fontSize: '12px' }}>
+          {onlineStatus ? '🟢 Online' : '🔴 Offline'}
+        </p>
       </div>
       <ul className="header__nav-list">
-        <li>Online Status : {onlineStatus ? '🟢' : '🔴'}</li>
         <li className="header__nav-items">
           <Link to={'/'}>home</Link>
         </li>

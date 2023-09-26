@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ALLOW_CORS_ERROR_MSG, RES_URL } from './constants';
+import { ALLOW_CORS_ERROR_MSG, RES_URL } from '../utils/constants';
 
 const fetchData = async (resID, setState) => {
   try {
