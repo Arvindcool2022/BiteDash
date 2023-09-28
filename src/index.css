@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  @apply box-border;
+}
+body {
+  @apply text-base text-[#333] m-0;
+  font-family: 'Rubik', sans-serif;
+  /* font-family: 'Oswald', sans-serif; */
+}
+a {
+  @apply no-underline text-inherit;
+}
+
+.oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+.header__logo {
+  animation: drive 6s forwards;
+}
+
+@keyframes drive {
+  0% {
+    transform: rotateY(180deg);
+    right: -15rem;
+  }
+
+  30% {
+    transform: rotateY(180deg);
+    right: 96%;
+  }
+
+  33% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    left: 5px;
+  }
+}
+
+.header__nav-items:has(a):hover {
+  @apply text-black -translate-y-0.5;
+}
