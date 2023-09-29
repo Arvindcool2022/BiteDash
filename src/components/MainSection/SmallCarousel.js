@@ -2,9 +2,9 @@ import SmallCarouselItem from './SmallCarouselItem';
 
 const SmallCarousel = ({ smallCarouselData }) => {
   return smallCarouselData.length === 0 ? null : (
-    <div className="sm-carousel container">
-      <h1 className="sm-carousel-title">What's in your mind?</h1>
-      <div className="sm-carousel__container">
+    <div className=" container">
+      <h1 className=" text-3xl mb-7">What's in your mind?</h1>
+      <div className="flex overflow-hidden">
         {smallCarouselData.map(item => (
           <SmallCarouselItem key={item.id} object={item} />
         ))}

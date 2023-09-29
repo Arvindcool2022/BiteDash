@@ -1,7 +1,7 @@
 const CarouselItem = object => (
-  <div className="carousel__img-container">
+  <div className="min-w-[450px]">
     <img
-      className="carousel__img"
+      className="w-full object-cover cursor-pointer"
       src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/${object.object.imageId}`}
       alt="food"
     />

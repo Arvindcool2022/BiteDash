@@ -14,7 +14,7 @@ const CardContainer = ({ listOfRestaurant }) => {
       Not Found
     </h1>
   ) : (
-    <div className="restaurant-container container">
+    <div className="grid gap-8 justify-items-center justify-center grid-cols-auto-fit-250 container">
       {listOfRestaurant.map(restaurant => (
         <Link key={restaurant.info.id} to={'/res/' + restaurant.info.id}>
           <Card restaurantObject={restaurant?.info} />

@@ -106,8 +106,3 @@ const MainSection = () => {
 };
 
 export default MainSection;
-
-// console.log(<CardContainer listOfRestaurant={resList} />);
-// console.log(
-//   React.createElement(CardContainer, { listOfRestaurant: { resList } })
-// );

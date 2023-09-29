@@ -45,3 +45,15 @@ a {
 .header__nav-items:has(a):hover {
   @apply text-black -translate-y-0.5;
 }
+
+.container {
+  @apply w-4/5;
+  margin-inline: auto;
+  margin-block: 4rem;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    @apply w-full;
+  }
+}

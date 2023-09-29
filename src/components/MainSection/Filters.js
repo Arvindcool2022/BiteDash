@@ -27,22 +27,28 @@ const Filters = ({ listOfRestaurant, filterResult, initialList }) => {
 
   return (
     <div className="container">
-      <h1 className="filter-title">
+      <h1 className=" text-3xl mb-7">
         Restaurants with online food delivery in Chennai
       </h1>
-      <div className="filters">
+      <div className="flex flex-wrap gap-4 py-6 px-4 border border-x-0">
         <input
-          className="searchBar"
+          className="py-4 px-5 rounded-full outline-1 outline-orange-200 border-none shadow-sm bg-orange-50 focus:bg-orange-200"
           type="search"
           value={searchValue}
           placeholder="Search..."
           onChange={searchItem}
         />
-        <button className="btn btn--filter" onClick={topRating}>
+        <button
+          className="py-4 px-7 rounded-full outline-1 outline-orange-400 border-none shadow-sm cursor-pointer bg-transparent active:shadow-none active:bg-orange-200"
+          onClick={topRating}
+        >
           {' '}
-          4+ <i className="bi bi-star-fill"></i> rating
+          4+ <i className="bi bi-star-fill text-xs"></i> rating
         </button>
-        <button className="btn btn--reset" onClick={resetALL}>
+        <button
+          className="py-4 px-7 rounded-full outline-1 outline-orange-400 border-none shadow-sm cursor-pointer bg-transparent active:shadow-none active:bg-orange-200"
+          onClick={resetALL}
+        >
           {' '}
           reset
         </button>

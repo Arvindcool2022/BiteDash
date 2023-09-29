@@ -16,7 +16,7 @@ const Header = ({ locationList }) => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <header className="text-center flex justify-between overflow-hidden relative px-1 shadow-md text-lg">
+    <header className="text-center flex justify-between overflow-hidden relative px-1 shadow-md text-lg py-5">
       <div className="items-center flex gap-2">
         <img className="w-14 absolute header__logo" src={logo} alt="logo" />
         <h3 className="text-orange-600 oswald text-2xl font-mono font-semibold m-0 ms-16 outline-orange-600 capitalize">
