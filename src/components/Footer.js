@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer style={{ textAlign: 'center' }}>
+    <footer className="text-center">
       <p>footer comes here</p>
     </footer>
   );

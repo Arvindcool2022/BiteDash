@@ -9,7 +9,7 @@ const MenuCard = ({ info }) => {
     return (
       <div className="my-6 p-4 flex justify-between rounded-xl shadow-md">
         <div>
-          <h3 className="oswald text-2xl mb-0">{name}</h3>
+          <h3 className="font-oswald text-2xl mb-0">{name}</h3>
           <p className="mt-2 mb-6 font-medium">Rs.{formattedPrice}</p>
           <p className="text-xs opacity-75">{formattedDescription}</p>
         </div>
