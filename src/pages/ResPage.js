@@ -10,9 +10,7 @@ const ResPage = () => {
 
   if (!resInfo) {
     return (
-      <h1
-        style={{ backgroundColor: 'red', color: 'white', fontStyle: 'italic' }}
-      >
+      <h1 className="bg-red-600 text-white italic">
         Unable to fetch live data from Swiggy for restaurant details due to a
         CORS issue. To see live data, please install a 'CORS-Allow' extension in
         your browser.
@@ -44,22 +42,24 @@ const ResPage = () => {
   }
 
   return (
-    <section className="res container">
-      <div className="flex">
-        <div className="res__info-card">
-          <h1 className="res__name">{name}</h1>
-          <p className="res__cuisines">{cuisines.join(', ')}</p>
-          <div className="flex">
-            <p className="res__del">{deliveryTime} mins to deliver</p>
-            <p className="res__del"> {costForTwo}</p>
+    <section className="container">
+      <div className="flex justify-between border-b-2">
+        <div className="capitalize p-4 ">
+          <h1 className="oswald text-4xl mb-2">{name}</h1>
+          <p className="mt-0 text-slate-400">{cuisines.join(', ')}</p>
+          <div className="flex justify-between">
+            <p className="capitalize pe-4 font-mono font-bold">
+              {deliveryTime} mins to deliver
+            </p>
+            <p className="capitalize pe-4 font-mono font-bold"> {costForTwo}</p>
           </div>
         </div>
-        <div className="res__rating">
-          <h3>{avgRatingString} rating</h3>
-          <p>{totalRatingsString}</p>
+        <div className="items-center py-6 px-3 capitalize ">
+          <h3 className="text-xl">{avgRatingString} rating</h3>
+          <p className="text-gray-500">{totalRatingsString}</p>
         </div>
       </div>
-      <section className="menu ">
+      <section className="mt-20">
         {menulist.map(item => (
           <MenuCard key={item?.card?.info?.id} info={item} />
         ))}
