@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useFetchResPageInfo from '../hooks/useFetchResPageInfo';
 import MenuCard from './_MenuCard';
+import { RES_MENU } from '../utils/constants.js';
 
 const ResPage = () => {
   const [resInfo, setResInfo] = useState([]);
@@ -35,11 +36,14 @@ const ResPage = () => {
     resInfo[1]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
       ?.itemCards ||
     resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card
-      ?.itemCards;
+      ?.itemCards ||
+    RES_MENU;
 
-  if (menulist.length > 16) {
-    menulist = menulist.slice(0, 15);
-  }
+  // if (menulist.length > 16) {
+  //   menulist = menulist.slice(0, 15);
+  // }
+
+  console.log(menulist);
 
   return (
     <section className="container">

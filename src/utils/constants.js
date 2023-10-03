@@ -3532,6 +3532,155 @@ const RESTAURANT_DATA = [
   }
 ];
 
+const RES_MENU = [
+  {
+    card: {
+      '@type': 'type.googleapis.com/swiggy.presentation.food.v2.Dish',
+      info: {
+        id: '123732241',
+        name: 'Super Over Combo - Chicken',
+        category: 'Cricket Mania Combos ( Save Rs 122)',
+        description: '2Whopper Jr Chicken+2Med Fries+2Pepsi',
+        imageId: '28ec9e7f61902f5dd1be6a091d3c12f6',
+        inStock: 1,
+        price: 63600,
+        variants: {},
+        variantsV2: {},
+        itemAttribute: {
+          vegClassifier: 'NONVEG'
+        },
+        ribbon: {},
+        type: 'ITEM',
+        itemBadge: {},
+        badgesV2: {},
+        ratings: {
+          aggregatedRating: {
+            rating: '3.0',
+            ratingCount: '11 ratings',
+            ratingCountV2: '11'
+          }
+        }
+      },
+      analytics: {},
+      hideRestaurantDetails: true
+    }
+  },
+  {
+    card: {
+      '@type': 'type.googleapis.com/swiggy.presentation.food.v2.Dish',
+      info: {
+        id: '123732242',
+        name: 'Game Changer Combo - Veg',
+        category: 'Cricket Mania Combos ( Save Rs 122)',
+        description: '2Veg Whopper+2Med Fries+2Pepsi',
+        imageId: 'f3493fdfb6c72748e9a7558dbf8a40ea',
+        inStock: 1,
+        isVeg: 1,
+        price: 65600,
+        variants: {},
+        variantsV2: {},
+        itemAttribute: {
+          vegClassifier: 'VEG'
+        },
+        ribbon: {},
+        type: 'ITEM',
+        itemBadge: {},
+        badgesV2: {},
+        ratings: {
+          aggregatedRating: {}
+        }
+      },
+      analytics: {},
+      hideRestaurantDetails: true
+    }
+  },
+  {
+    card: {
+      '@type': 'type.googleapis.com/swiggy.presentation.food.v2.Dish',
+      info: {
+        id: '123732243',
+        name: 'Game Changer Combo - Chicken',
+        category: 'Cricket Mania Combos ( Save Rs 122)',
+        description: '2Chicken Whopper+2Med Fries+2Pepsi',
+        imageId: 'c8381149894036a48afe8cd6f250d6a4',
+        inStock: 1,
+        price: 69600,
+        variants: {},
+        variantsV2: {},
+        itemAttribute: {
+          vegClassifier: 'NONVEG'
+        },
+        ribbon: {},
+        type: 'ITEM',
+        itemBadge: {},
+        badgesV2: {},
+        ratings: {
+          aggregatedRating: {}
+        }
+      },
+      analytics: {},
+      hideRestaurantDetails: true
+    }
+  },
+  {
+    card: {
+      '@type': 'type.googleapis.com/swiggy.presentation.food.v2.Dish',
+      info: {
+        id: '123732244',
+        name: 'The Hattick Combo - Veg',
+        category: 'Cricket Mania Combos ( Save Rs 122)',
+        description: '2Mexican Veg Whopper+2Med Fries+2Pepsi',
+        imageId: '4a0c25bdd1b9b774bf8549802d3503ba',
+        inStock: 1,
+        isVeg: 1,
+        price: 73600,
+        variants: {},
+        variantsV2: {},
+        itemAttribute: {
+          vegClassifier: 'VEG'
+        },
+        ribbon: {},
+        type: 'ITEM',
+        itemBadge: {},
+        badgesV2: {},
+        ratings: {
+          aggregatedRating: {}
+        }
+      },
+      analytics: {},
+      hideRestaurantDetails: true
+    }
+  },
+  {
+    card: {
+      '@type': 'type.googleapis.com/swiggy.presentation.food.v2.Dish',
+      info: {
+        id: '123732245',
+        name: 'The Hattrick Combo - Chicken',
+        category: 'Cricket Mania Combos ( Save Rs 122)',
+        description: '2Mexican Chicken Whopper+2Med Fries+2Pepsi',
+        imageId: '3e6587106d2df35985009ac256322347',
+        inStock: 1,
+        price: 77600,
+        variants: {},
+        variantsV2: {},
+        itemAttribute: {
+          vegClassifier: 'NONVEG'
+        },
+        ribbon: {},
+        type: 'ITEM',
+        itemBadge: {},
+        badgesV2: {},
+        ratings: {
+          aggregatedRating: {}
+        }
+      },
+      analytics: {},
+      hideRestaurantDetails: true
+    }
+  }
+];
+
 const SWIGGY_API_URL =
   'https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
 
@@ -3547,6 +3696,7 @@ export {
   CAROUSEL_DATA,
   SMALL_CAROUSEL_DATA,
   RESTAURANT_DATA,
+  RES_MENU,
   RES_URL,
   SWIGGY_API_URL,
   ALLOW_CORS_ERROR_MSG
