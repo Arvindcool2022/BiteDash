@@ -4,7 +4,7 @@ const Carousel = ({ carouselData }) => {
   return carouselData.length === 0 ? null : (
     <div className="container">
       <h1 className=" text-3xl mb-7">Best offers for you</h1>
-      <div className="flex gap-3 overflow-hidden">
+      <div className="flex gap-3  overflow-hidden hover:overflow-x-scroll ">
         {carouselData.map(item => (
           <CarouselItem key={item.id} object={item} />
         ))}

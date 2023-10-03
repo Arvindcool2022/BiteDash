@@ -20,7 +20,7 @@ const ResPage = () => {
   }
 
   if (resInfo.length === 0) return <h1 className="container">loading...</h1>;
-
+  console.log('json =>', resInfo);
   const {
     name = 'local restaurant',
     cuisines,
@@ -43,7 +43,7 @@ const ResPage = () => {
   //   menulist = menulist.slice(0, 15);
   // }
 
-  console.log(menulist);
+  // console.log(menulist);
 
   return (
     <section className="container">
