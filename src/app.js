@@ -8,6 +8,7 @@ import MainSection from './components/MainSection.js';
 import Footer from './components/Footer';
 
 import About from './pages/About';
+import FAQ from './pages/FAQ';
 import Error from './pages/Error';
 import { Suspense, lazy } from 'react';
 const ResPage = lazy(() => import('./pages/ResPage'));
@@ -29,6 +30,10 @@ const AppRouter = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/faq',
+        element: <FAQ />
       },
       {
         path: '/res/:id',

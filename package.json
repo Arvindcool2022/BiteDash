@@ -40,5 +40,9 @@
   },
   "browserslists": [
     "last 5 versions"
-  ]
+  ],
+  "main": "tailwind.config.js",
+  "directories": {
+    "doc": "docs"
+  }
 }

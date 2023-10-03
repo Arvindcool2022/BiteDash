@@ -34,4 +34,45 @@
       @apply w-full;
     }
   }
+
+  .gradient-animation {
+    @apply text-black bg-clip-text;
+    background: rgb(240, 249, 22);
+    background: linear-gradient(
+      90deg,
+      rgba(240, 249, 22, 1) 0%,
+      rgba(255, 63, 0, 1) 50%,
+      rgba(240, 249, 22, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 7.5s linear infinite;
+  }
+  @keyframes shine {
+    0% {
+      @apply bg-[200%_auto];
+    }
+    50% {
+      @apply bg-[200%_center];
+    }
+    100% {
+      @apply bg-[200%_auto];
+    }
+  }
 }
+
+/* 
+shine: 'shine 1s linear infinite'
+
+        shine: {
+          '0%': {
+            backgroundSize: '200% auto'
+          },
+          '50%': {
+            backgroundSize: '200% center'
+          },
+          '100%': {
+            backgroundSize: '200% auto'
+          }
+        }
+ */

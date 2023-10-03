@@ -65,8 +65,8 @@ const About = () => {
           initiatives.
         </li>
       </ul>
-      <h3 className=" italic my-6 font-bold uppercase text-2xl text-orange-500">
-        Join Our Journey
+      <h3 className=" italic my-8 font-bold uppercase text-3xl text-center">
+        <span className="gradient-animation"> 'Join Our Journey'</span>
       </h3>
 
       <p>
@@ -97,7 +97,7 @@ const About = () => {
 
       <p className="mb-2">Sincerely,</p>
 
-      <p className="text-red-700 font-medium italic underline">
+      <p className="text-red-700 font-medium text-xl italic underline">
         The Bite-Dash Team
       </p>
     </div>

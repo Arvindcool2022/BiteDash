@@ -19,7 +19,7 @@ const Header = ({ locationList }) => {
     <header className="text-center flex justify-between overflow-hidden relative px-1 shadow-md text-lg py-5">
       <div className="items-center flex gap-2">
         <img className="w-14 absolute animate-drive" src={logo} alt="logo" />
-        <h3 className="text-orange-600 uppercase text-2xl font-oswald font-semibold m-0 ms-16 outline-orange-600 ">
+        <h3 className="gradient-animation uppercase text-2xl font-oswald font-semibold m-0 ms-16 outline-orange-600 ">
           <Link to={'/'}>Bite Dash</Link>
         </h3>
         <select
@@ -40,7 +40,7 @@ const Header = ({ locationList }) => {
           <Link to={'/about'}>about us</Link>
         </li>
         <li className="text-black hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
-          <Link to={'/'}>Faq</Link>
+          <Link to={'/faq'}>FAQ</Link>
         </li>
         <li
           className="text-black hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
