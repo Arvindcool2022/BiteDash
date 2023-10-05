@@ -29,6 +29,7 @@
   .container {
     @apply w-4/5 mx-auto my-16;
   }
+
   @media screen and (max-width: 500px) {
     .container {
       @apply w-full;
@@ -48,6 +49,7 @@
     -webkit-text-fill-color: transparent;
     animation: shine 7.5s linear infinite;
   }
+
   @keyframes shine {
     0% {
       @apply bg-[200%_auto];

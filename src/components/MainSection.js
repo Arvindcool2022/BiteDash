@@ -86,10 +86,9 @@ const MainSection = () => {
       </h1>
     );
 
-  return !(resList && smallCarouselList && carouselList) ? (
+  return !(smallCarouselList && carouselList) ? (
     fallBack() //! if api returns undefined
-  ) : (resList.length && smallCarouselList.length && carouselList.length) ===
-    0 ? (
+  ) : (smallCarouselList.length && carouselList.length) === 0 ? (
     <h1>loading...</h1>
   ) : (
     <section className="main-section">
