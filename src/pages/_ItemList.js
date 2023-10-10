@@ -18,7 +18,7 @@ const ItemList = ({ data }) => {
             imageId
           }
         />
-        <button className="absolute font-bold whitespace-nowrap py-2 px-4 bg-white outline-none  rounded-lg bottom-2 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in hover:bg-gray-500 hover:text-white">
+        <button className="absolute font-bold whitespace-nowrap py-2 px-4 bg-white outline-none  rounded-lg bottom-2 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in hover:bg-orange-600 hover:text-white">
           Add <small>+</small>
         </button>
       </div>

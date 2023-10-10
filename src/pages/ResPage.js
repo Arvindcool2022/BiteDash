@@ -8,6 +8,16 @@ const ResPage = () => {
   const { id } = useParams();
   useFetchResPageInfo(id, setResInfo);
 
+  const [menuIndex, setMenuIndex] = useState(0);
+
+  const toggleAnswer = index => {
+    if (menuIndex === index) {
+      setMenuIndex(null);
+    } else {
+      setMenuIndex(index);
+    }
+  };
+
   if (!resInfo) {
     return (
       <h1 className="bg-red-600 text-white italic">
@@ -53,8 +63,13 @@ const ResPage = () => {
         </div>
       </div>
       <section className="mt-20">
-        {menulist.map(item => (
-          <MenuCard key={item?.card?.card?.title} info={item} />
+        {menulist.map((item, index) => (
+          <MenuCard
+            key={item?.card?.card?.title}
+            info={item}
+            isOpen={menuIndex === index}
+            toggleFunc={() => toggleAnswer(index)}
+          />
         ))}
       </section>
     </section>
