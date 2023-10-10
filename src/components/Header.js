@@ -11,7 +11,7 @@ const LocationNames = ({ array }) =>
     </option>
   ));
 
-const Header = ({ locationList, loggedIn, loginFunc }) => {
+const Header = ({ locationList, loggedIn, loginFunc, cb }) => {
   const statusKeyWord = loggedIn ? 'logout' : 'login';
 
   const onlineStatus = useOnlineStatus();
@@ -27,6 +27,7 @@ const Header = ({ locationList, loggedIn, loginFunc }) => {
         <select
           className="border-none text-gray-500 outline-none capitalize w-fit"
           name="location"
+          onChange={e => cb(e.target.value)}
         >
           <LocationNames array={locationList} />
         </select>

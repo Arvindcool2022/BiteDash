@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import UserContext from '../../utils/UserContext';
 
 const Filters = ({ listOfRestaurant, filterResult, initialList }) => {
   const [searchValue, setSearchValue] = useState('');
@@ -25,10 +26,13 @@ const Filters = ({ listOfRestaurant, filterResult, initialList }) => {
     filterResult(initialList);
   };
 
+  const { place } = useContext(UserContext);
+
   return (
     <div className="container">
       <h1 className=" text-3xl mb-7">
-        Restaurants with online food delivery in Chennai
+        Restaurants with online food delivery in{' '}
+        <span className="capitalize">{place}</span>
       </h1>
       <div className="flex flex-wrap gap-4 py-6 px-4 border border-x-0">
         <input

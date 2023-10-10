@@ -18,7 +18,6 @@ const MainSection = () => {
   const [smallCarouselList, setSmallCarouselList] = useState([]);
   const [resList, setResList] = useState([]);
   const [filterList, setFilterList] = useState([]);
-  // console.log(carouselList, smallCarouselList, resList, ' rendered');
 
   const fallBack = () => {
     setCarouselList(CAROUSEL_DATA);

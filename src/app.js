@@ -19,6 +19,8 @@ const AppLayout = () => {
   const [userName, setUserName] = useState(defaultName);
   const [login, setLogin] = useState(false);
 
+  const [place, setPlace] = useState(LOCATIONS[0]);
+
   useEffect(() => {
     //! api call logic
     const data = { user: 'arvind' };
@@ -28,12 +30,13 @@ const AppLayout = () => {
   }, [login]);
 
   return (
-    <UserContext.Provider value={{ LoggedInUser: userName }}>
+    <UserContext.Provider value={{ LoggedInUser: userName, place }}>
       <div id="AppLayout">
         <Header
           locationList={LOCATIONS}
           loggedIn={login}
           loginFunc={() => setLogin(!login)}
+          cb={setPlace}
         />
         <Outlet />
         <Footer />

@@ -35,14 +35,25 @@ const ResPage = () => {
     costForTwoMessage: costForTwo,
     sla: { maxDeliveryTime: deliveryTime },
     avgRatingString,
-    totalRatingsString
+    totalRatingsString,
+    aggregatedDiscountInfo: { descriptionList: discount }
   } = resInfo[0]?.card?.card?.info;
+
+  //TODO: console.log(name, '=>', discount);
 
   let menulist = resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
     c =>
       c.card?.['card']?.['@type'] ===
       'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory'
   );
+
+  if (menulist.length === 0) {
+    menulist = resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      c =>
+        c.card?.['card']?.['@type'] ===
+        'type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory'
+    );
+  }
 
   return (
     <section className="container">
