@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useFetchResPageInfo from '../hooks/useFetchResPageInfo';
 import MenuCard from './_MenuCard';
-import { RES_MENU } from '../utils/constants.js';
 
 const ResPage = () => {
   const [resInfo, setResInfo] = useState([]);
@@ -20,7 +19,6 @@ const ResPage = () => {
   }
 
   if (resInfo.length === 0) return <h1 className="container">loading...</h1>;
-  console.log('json =>', resInfo);
   const {
     name = 'local restaurant',
     cuisines,
@@ -30,20 +28,11 @@ const ResPage = () => {
     totalRatingsString
   } = resInfo[0]?.card?.card?.info;
 
-  let menulist =
-    resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
-      ?.itemCards ||
-    resInfo[1]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
-      ?.itemCards ||
-    resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card
-      ?.itemCards ||
-    RES_MENU;
-
-  // if (menulist.length > 16) {
-  //   menulist = menulist.slice(0, 15);
-  // }
-
-  // console.log(menulist);
+  let menulist = resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    c =>
+      c.card?.['card']?.['@type'] ===
+      'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory'
+  );
 
   return (
     <section className="container">
@@ -65,7 +54,7 @@ const ResPage = () => {
       </div>
       <section className="mt-20">
         {menulist.map(item => (
-          <MenuCard key={item?.card?.info?.id} info={item} />
+          <MenuCard key={item?.card?.card?.title} info={item} />
         ))}
       </section>
     </section>

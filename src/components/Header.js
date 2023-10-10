@@ -53,6 +53,9 @@ const Header = ({ locationList, loggedIn, loginFunc }) => {
         >
           {statusKeyWord}
         </li>
+        <li className=" hover:text-orange-600 transition-all duration-300 ease-in-out">
+          <Link to={'/cart'}>cart</Link>
+        </li>
         <li>
           <button className="bg-transparent rounded-full border-none cursor-pointer text-xs mb-1 ms-8 outline outline-orange-600 outline-2 p-2 capitalize transition-all duration-300 ease-in-out hover:bg-orange-600 hover:text-white active:scale-90">
             {userName}

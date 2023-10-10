@@ -1,40 +1,42 @@
+import chevron from '../utils/SVG/chevron-right.svg';
+import ItemList from './_ItemList';
+import { useState } from 'react';
+
 const MenuCard = ({ info }) => {
-  const { name, price, defaultPrice, description, category, imageId } =
-    info?.card?.info;
+  // const [menuIndex, setMenuIndex] = useState(null);
 
-  const formattedPrice = price / 100 || defaultPrice / 100;
-  const formattedDescription = description || category;
+  // const toggleAnswer = index => {
+  //   if (menuIndex === index) {
+  //     setMenuIndex(null);
+  //   } else {
+  //     setMenuIndex(index);
+  //   }
+  // };
+  const [isOpen, setIsOpen] = useState(false);
 
-  if (name && formattedPrice && formattedDescription && imageId) {
-    return (
-      <div className="my-6 p-4 flex justify-between rounded-xl shadow-md">
-        <div>
-          <h3 className="font-oswald text-2xl mb-0">{name}</h3>
-          <p className="mt-2 mb-6 font-medium">Rs.{formattedPrice}</p>
-          <p className="text-xs opacity-75">{formattedDescription}</p>
-        </div>
-        <div className="relative rounded-xl overflow-hidden">
-          <img
-            src={
-              'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/' +
-              imageId
-            }
-          />
-          <button className="absolute font-bold whitespace-nowrap py-2 px-4 bg-white outline-none  rounded-lg bottom-2 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in hover:bg-gray-500 hover:text-white">
-            Add <small>+</small>
-          </button>
-        </div>
+  const title = info?.card?.card?.title || 'Menu Items';
+  const items = info?.card?.card?.itemCards;
+
+  return (
+    <div>
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex justify-between my-4 p-4 border-b-[1px] border-b-orange-700 bg-orange-100 rounded-lg shadow"
+      >
+        <h1 className="font-semibold text-lg">{title}</h1>
+        <img className="h-5" src={chevron} alt="menu-toggle" />
       </div>
-    );
-  } else {
-    console.log('Card data is incomplete:', {
-      name,
-      formattedPrice,
-      formattedDescription,
-      imageId
-    });
-    return null;
-  }
+      {isOpen &&
+        items.map((item, index) => (
+          <ItemList
+            key={item.card.info.id}
+            data={item}
+            // isOpen={openQuestionIndex === index}
+            // toggleFunc={() => toggleAnswer(index)}
+          />
+        ))}
+    </div>
+  );
 };
 
 export default MenuCard;
