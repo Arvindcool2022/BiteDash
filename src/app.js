@@ -10,16 +10,37 @@ import Footer from './components/Footer';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
 import Error from './pages/Error';
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useContext, useEffect, useState } from 'react';
+import UserContext from './utils/UserContext';
 const ResPage = lazy(() => import('./pages/ResPage'));
 
-const AppLayout = () => (
-  <div id="AppLayout">
-    <Header locationList={LOCATIONS} />
-    <Outlet />
-    <Footer />
-  </div>
-);
+const AppLayout = () => {
+  const { LoggedInUser: defaultName } = useContext(UserContext);
+  const [userName, setUserName] = useState(defaultName);
+  const [login, setLogin] = useState(false);
+
+  useEffect(() => {
+    //! api call logic
+    const data = { user: 'arvind' };
+
+    if (login) setUserName(data.user);
+    else setUserName(defaultName);
+  }, [login]);
+
+  return (
+    <UserContext.Provider value={{ LoggedInUser: userName }}>
+      <div id="AppLayout">
+        <Header
+          locationList={LOCATIONS}
+          loggedIn={login}
+          loginFunc={() => setLogin(!login)}
+        />
+        <Outlet />
+        <Footer />
+      </div>
+    </UserContext.Provider>
+  );
+};
 
 const AppRouter = createBrowserRouter([
   {

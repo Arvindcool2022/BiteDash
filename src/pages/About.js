@@ -1,11 +1,30 @@
+import { useContext, useEffect, useState } from 'react';
+import UserContext from '../utils/UserContext';
+
 const About = () => {
+  const { LoggedInUser: userName } = useContext(UserContext);
+  const [greet, setGreet] = useState(false);
+
+  useEffect(() => {
+    userName === 'Guest User' ? setGreet(false) : setGreet(true);
+  }, [userName]);
+
   return (
     <div className="container text-stone-700">
       <h1 className="font-bold font-oswald text-3xl mb-8 underline text-orange-600">
         About Us
       </h1>
 
-      <p>Welcome to Bite-Dash - Your Culinary Journey, Delivered!</p>
+      <p>
+        {greet && (
+          <span>
+            Hello,{' '}
+            <span className="font-semibold capitalize text-lg">{userName}</span>
+            .{' '}
+          </span>
+        )}
+        Welcome to Bite-Dash - Your Culinary Journey, Delivered!
+      </p>
 
       <h2 className="font-oswald font-medium text-xl my-4 text-orange-500">
         Our Story

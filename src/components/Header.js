@@ -1,19 +1,21 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import logo from '../utils/SVG/delivery app logo.svg';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../hooks/useOnlineStatus';
+import UserContext from '../utils/UserContext';
 
 const LocationNames = ({ array }) =>
   array.map(place => (
-    <option key={place} className="header__options" value={place}>
+    <option key={place} value={place}>
       {place}
     </option>
   ));
 
-const Header = ({ locationList }) => {
-  const [login, setLogin] = useState(false);
-  const statusKeyWord = login ? 'sign-out' : 'sign-in';
+const Header = ({ locationList, loggedIn, loginFunc }) => {
+  const statusKeyWord = loggedIn ? 'logout' : 'login';
+
   const onlineStatus = useOnlineStatus();
+  const { LoggedInUser: userName } = useContext(UserContext);
 
   return (
     <header className="text-center flex justify-between overflow-hidden relative px-1 shadow-md text-lg py-5">
@@ -32,25 +34,28 @@ const Header = ({ locationList }) => {
           {onlineStatus ? '🟢 Online' : '🔴 Offline'}
         </p>
       </div>
-      <ul className="items-center cursor-pointer flex gap-3 capitalize whitespace-nowrap list-none">
-        <li className="text-black hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+      <ul className="items-center cursor-pointer flex gap-3 capitalize whitespace-nowrap list-none text-black text-sm md:text-base">
+        <li className=" hover:text-orange-600 transition-all duration-300 ease-in-out">
           <Link to={'/'}>home</Link>
         </li>
-        <li className="text-black hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+        <li className=" hover:text-orange-600 transition-all duration-300 ease-in-out">
           <Link to={'/about'}>about us</Link>
         </li>
-        <li className="text-black hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+        <li className=" hover:text-orange-600 transition-all duration-300 ease-in-out">
           <Link to={'/faq'}>FAQ</Link>
         </li>
         <li
-          className="text-black hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
-          onClick={() => setLogin(!login)}
+          className=" hover:text-orange-600 transition-all duration-300 ease-in-out"
+          onClick={e => {
+            e.preventDefault();
+            loginFunc();
+          }}
         >
-          <Link> {statusKeyWord}</Link>
+          {statusKeyWord}
         </li>
         <li>
-          <button className="bg-transparent rounded border-none cursor-pointer text-lg mb-1 ms-8 outline outline-orange-600 py-1 px-3 capitalize transition-all duration-300 ease-in-out hover:bg-orange-600 hover:text-white active:scale-90">
-            cart
+          <button className="bg-transparent rounded-full border-none cursor-pointer text-xs mb-1 ms-8 outline outline-orange-600 outline-2 p-2 capitalize transition-all duration-300 ease-in-out hover:bg-orange-600 hover:text-white active:scale-90">
+            {userName}
           </button>
         </li>
       </ul>
