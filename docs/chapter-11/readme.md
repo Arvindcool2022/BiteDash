@@ -1,4 +1,4 @@
-# _Chapter 10 - Jo dikhta hai woh bikta hai (what is seen is sold)_
+# _Chapter 11 - Data is the new oil_
 
 ## Topics covered in this session:
 
