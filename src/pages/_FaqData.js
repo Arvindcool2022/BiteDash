@@ -1,35 +1,21 @@
-import { useState } from 'react';
 import chevron from '../utils/SVG/chevron-right.svg';
 
-const FaqData = ({ prop }) => {
-  const { Question, Answer } = prop;
-  console.log(Question, Answer);
+const FaqData = ({ data, isOpen, toggleFunc }) => {
+  const { Question, Answer } = data;
 
-  const hide =
-    'max-h-0 mb-2 overflow-hidden transition-all duration-300 ease-in';
-  const show =
-    'max-h-[200px] mb-4 overflow-hidden transition-all duration-300 ease-in';
-  const [answerClass, setAnswerClass] = useState(hide);
+  const hide = 'max-h-0 mb-2 overflow-hidden transition-all duration-300';
+  const show = 'max-h-[200px] mb-2 overflow-hidden transition-all duration-300';
+  const closed = 'w-6 transition-transform duration-200 ease-in rotate-0';
+  const opened = 'w-6 transition-transform duration-200 ease-in rotate-90';
 
-  const open = 'w-6 transition-transform duration-200 ease-in rotate-0';
-  const close = 'w-6 transition-transform duration-200 ease-in rotate-90';
+  const answerClass = isOpen ? show : hide;
+  const toggleIconClass = isOpen ? opened : closed;
 
-  const [toggleIconClass, setToggleIconClass] = useState(open);
-
-  const toggleAnswer = () => {
-    if (answerClass === hide) {
-      setAnswerClass(show);
-      setToggleIconClass(close);
-    } else {
-      setAnswerClass(hide);
-      setToggleIconClass(open);
-    }
-  };
   return (
     <li className="list-none p-2 border-b-[1px] border-b-orange-600">
       <div
         className="flex justify-between cursor-pointer mb-2"
-        onClick={toggleAnswer}
+        onClick={toggleFunc}
       >
         <h2 className="text-xl font-medium text-orange-600">{Question}</h2>
         <img className={toggleIconClass} src={chevron} />
