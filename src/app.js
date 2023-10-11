@@ -1,7 +1,11 @@
 import ReactDom from 'react-dom/client';
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
+import { Suspense, lazy, useContext, useEffect, useState } from 'react';
+import { Provider } from 'react-redux';
 
 import { LOCATIONS } from './utils/constants';
+import UserContext from './utils/UserContext';
+import appStore from './store/appStore';
 
 import Header from './components/Header';
 import MainSection from './components/MainSection.js';
@@ -10,8 +14,6 @@ import Footer from './components/Footer';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
 import Error from './pages/Error';
-import { Suspense, lazy, useContext, useEffect, useState } from 'react';
-import UserContext from './utils/UserContext';
 const ResPage = lazy(() => import('./pages/ResPage'));
 
 const AppLayout = () => {
@@ -30,18 +32,20 @@ const AppLayout = () => {
   }, [login]);
 
   return (
-    <UserContext.Provider value={{ LoggedInUser: userName, place }}>
-      <div id="AppLayout">
-        <Header
-          locationList={LOCATIONS}
-          loggedIn={login}
-          loginFunc={() => setLogin(!login)}
-          cb={setPlace}
-        />
-        <Outlet />
-        <Footer />
-      </div>
-    </UserContext.Provider>
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ LoggedInUser: userName, place }}>
+        <div id="AppLayout">
+          <Header
+            locationList={LOCATIONS}
+            loggedIn={login}
+            loginFunc={() => setLogin(!login)}
+            cb={setPlace}
+          />
+          <Outlet />
+          <Footer />
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
