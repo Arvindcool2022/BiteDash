@@ -47,7 +47,7 @@ const ResPage = () => {
       'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory'
   );
 
-  if (menulist.length === 0) {
+  if (menulist.length === 0 || false) {
     menulist = resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       c =>
         c.card?.['card']?.['@type'] ===
