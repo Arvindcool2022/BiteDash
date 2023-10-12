@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FAQ_LIST } from '../utils/constants';
-import FaqData from './_FaqData';
+import FaqData from '../components/_FaqData';
 
 const FAQ = () => {
   const [openQuestionIndex, setOpenQuestionIndex] = useState(null);

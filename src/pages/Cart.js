@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import CartItemList from './_CartItemList';
+import CartItemList from '../components/_CartItemList';
 import { clearCart } from '../store/cartSlice';
 
 const Cart = () => {

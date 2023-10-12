@@ -7,10 +7,10 @@ import {
   ALLOW_CORS_ERROR_MSG
 } from '../utils/constants';
 
-import Carousel from './MainSection/Carousel';
-import SmallCarousel from './MainSection/SmallCarousel';
-import Filters from './MainSection/Filters';
-import CardContainer from './MainSection/CardContainer';
+import Carousel from '../components/MainSection/Carousel';
+import SmallCarousel from '../components/MainSection/SmallCarousel';
+import Filters from '../components/MainSection/Filters';
+import CardContainer from '../components/MainSection/CardContainer';
 import useOnlineStatus from '../hooks/useOnlineStatus';
 
 const MainSection = () => {

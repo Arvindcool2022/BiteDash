@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useFetchResPageInfo from '../hooks/useFetchResPageInfo';
-import MenuCard from './_MenuCard';
+import MenuCard from '../components/_MenuCard';
 
 const ResPage = () => {
   const [resInfo, setResInfo] = useState([]);

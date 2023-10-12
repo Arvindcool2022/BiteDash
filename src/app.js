@@ -8,7 +8,7 @@ import UserContext from './utils/UserContext';
 import appStore from './store/appStore';
 
 import Header from './components/Header';
-import MainSection from './components/MainSection.js';
+import MainSection from './pages/MainSection';
 
 import About from './pages/About';
 import FAQ from './pages/FAQ';
