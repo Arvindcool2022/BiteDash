@@ -9,11 +9,11 @@ import appStore from './store/appStore';
 
 import Header from './components/Header';
 import MainSection from './components/MainSection.js';
-import Footer from './components/Footer';
 
 import About from './pages/About';
 import FAQ from './pages/FAQ';
 import Error from './pages/Error';
+import Cart from './pages/Cart';
 const ResPage = lazy(() => import('./pages/ResPage'));
 
 const AppLayout = () => {
@@ -42,7 +42,6 @@ const AppLayout = () => {
             cb={setPlace}
           />
           <Outlet />
-          <Footer />
         </div>
       </UserContext.Provider>
     </Provider>
@@ -62,6 +61,10 @@ const AppRouter = createBrowserRouter([
       {
         path: '/faq',
         element: <FAQ />
+      },
+      {
+        path: '/cart',
+        element: <Cart />
       },
       {
         path: '/res/:id',

@@ -1,14 +1,14 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { addItem } from '../store/cartSlice';
+// import { useDispatch } from 'react-redux';
 
-const ItemList = ({ data }) => {
+const CartItemList = ({ data }) => {
+  console.log(data);
   const { name, description, price, imageId, defaultPrice } = data.card.info;
-  const dispatch = useDispatch();
+  //   const dispatch = useDispatch();
 
-  const handleAddItem = item => {
-    dispatch(addItem(item));
-  };
+  //   const handleAddItem = item => {
+  //     dispatch(addItem(item));
+  //   };
   return (
     <div className="my-6 p-4 flex justify-between rounded-xl shadow-md">
       <div>
@@ -25,15 +25,15 @@ const ItemList = ({ data }) => {
             imageId
           }
         />
-        <button
+        {/* <button
           className="absolute font-bold whitespace-nowrap py-2 px-4 bg-white outline-none  rounded-lg bottom-2 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in hover:bg-orange-600 hover:text-white"
           onClick={() => handleAddItem(data)}
         >
           Add <small>+</small>
-        </button>
+        </button> */}
       </div>
     </div>
   );
 };
 
-export default ItemList;
+export default CartItemList;

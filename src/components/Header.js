@@ -3,6 +3,7 @@ import logo from '../utils/SVG/delivery app logo.svg';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../hooks/useOnlineStatus';
 import UserContext from '../utils/UserContext';
+import { useSelector } from 'react-redux';
 
 const LocationNames = ({ array }) =>
   array.map(place => (
@@ -13,7 +14,7 @@ const LocationNames = ({ array }) =>
 
 const Header = ({ locationList, loggedIn, loginFunc, cb }) => {
   const statusKeyWord = loggedIn ? 'logout' : 'login';
-
+  const cartItems = useSelector(store => store.cart.items);
   const onlineStatus = useOnlineStatus();
   const { LoggedInUser: userName } = useContext(UserContext);
 
@@ -55,7 +56,14 @@ const Header = ({ locationList, loggedIn, loginFunc, cb }) => {
           {statusKeyWord}
         </li>
         <li className=" hover:text-orange-600 transition-all duration-300 ease-in-out">
-          <Link to={'/cart'}>cart</Link>
+          <Link to={'/cart'}>
+            cart
+            {cartItems.length > 0 && (
+              <span className="text-orange-600 font-semibold">
+                ({cartItems.length})
+              </span>
+            )}
+          </Link>
         </li>
         <li>
           <button className="bg-transparent rounded-full border-none cursor-pointer text-xs mb-1 ms-8 outline outline-orange-600 outline-2 p-2 capitalize transition-all duration-300 ease-in-out hover:bg-orange-600 hover:text-white active:scale-90">
