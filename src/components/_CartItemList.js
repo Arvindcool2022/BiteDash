@@ -1,14 +1,9 @@
 import React from 'react';
-// import { useDispatch } from 'react-redux';
+import { RES_MENU_IMG } from '../utils/constants';
 
 const CartItemList = ({ data }) => {
-  console.log(data);
   const { name, description, price, imageId, defaultPrice } = data.card.info;
-  //   const dispatch = useDispatch();
 
-  //   const handleAddItem = item => {
-  //     dispatch(addItem(item));
-  //   };
   return (
     <div className="my-6 p-4 flex justify-between rounded-xl shadow-md">
       <div>
@@ -19,18 +14,7 @@ const CartItemList = ({ data }) => {
         <p className="text-xs opacity-75">{description}</p>
       </div>
       <div className="relative rounded-xl overflow-hidden">
-        <img
-          src={
-            'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/' +
-            imageId
-          }
-        />
-        {/* <button
-          className="absolute font-bold whitespace-nowrap py-2 px-4 bg-white outline-none  rounded-lg bottom-2 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in hover:bg-orange-600 hover:text-white"
-          onClick={() => handleAddItem(data)}
-        >
-          Add <small>+</small>
-        </button> */}
+        <img src={RES_MENU_IMG + imageId} />
       </div>
     </div>
   );

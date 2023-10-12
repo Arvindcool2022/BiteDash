@@ -11,11 +11,7 @@ const ResPage = () => {
   const [menuIndex, setMenuIndex] = useState(0);
 
   const toggleAnswer = index => {
-    if (menuIndex === index) {
-      setMenuIndex(null);
-    } else {
-      setMenuIndex(index);
-    }
+    setMenuIndex(menuIndex === index ? null : index);
   };
 
   if (!resInfo) {
@@ -41,14 +37,16 @@ const ResPage = () => {
 
   //TODO: console.log(name, '=>', discount);
 
-  let menulist = resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+  const menuData = resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+
+  let menulist = menuData?.filter(
     c =>
       c.card?.['card']?.['@type'] ===
       'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory'
   );
 
   if (menulist.length === 0 || false) {
-    menulist = resInfo[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    menulist = menuData.filter(
       c =>
         c.card?.['card']?.['@type'] ===
         'type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory'

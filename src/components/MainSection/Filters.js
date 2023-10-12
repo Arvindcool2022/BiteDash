@@ -3,10 +3,11 @@ import UserContext from '../../utils/UserContext';
 
 const Filters = ({ listOfRestaurant, filterResult, initialList }) => {
   const [searchValue, setSearchValue] = useState('');
+  const { place } = useContext(UserContext);
 
   const searchItem = e => {
     let value = e.target.value;
-    setSearchValue(value); // to update in ui
+    setSearchValue(value);
 
     let filteredList = initialList.filter(item =>
       item?.info.name.toLowerCase().includes(e.target.value.toLowerCase())
@@ -14,19 +15,17 @@ const Filters = ({ listOfRestaurant, filterResult, initialList }) => {
     filterResult(filteredList);
   };
 
-  const topRating = () => {
+  const filterByTopRating = () => {
     const filteredList = listOfRestaurant.filter(
       item => item?.info.avgRating >= 4
     );
     filterResult(filteredList);
   };
 
-  const resetALL = () => {
+  const resetFilters = () => {
     setSearchValue('');
     filterResult(initialList);
   };
-
-  const { place } = useContext(UserContext);
 
   return (
     <div className="container">
@@ -44,14 +43,14 @@ const Filters = ({ listOfRestaurant, filterResult, initialList }) => {
         />
         <button
           className="py-4 px-7 rounded-full outline-1 outline-orange-400 border border-solid border-orange-200 cursor-pointer bg-transparent transition-all duration-150 ease-in-out hover:bg-orange-100 active:bg-orange-200"
-          onClick={topRating}
+          onClick={filterByTopRating}
         >
           {' '}
           4+ <i className="bi bi-star-fill text-xs"></i> rating
         </button>
         <button
           className="py-4 px-7 rounded-full outline-1 outline-orange-400 border border-solid border-orange-200 cursor-pointer bg-transparent transition-all duration-150 ease-in-out hover:bg-orange-100 active:bg-orange-200"
-          onClick={resetALL}
+          onClick={resetFilters}
         >
           {' '}
           reset

@@ -44,12 +44,6 @@ const MainSection = () => {
       jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
-
-    // console.log(
-    //   jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
-    //     ?.restaurants,
-    //   ' use effect'
-    // );
   };
 
   const fetchSwiggyData = async () => {

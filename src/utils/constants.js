@@ -1,4 +1,4 @@
-// all mock datas
+// all mock/fallback datas and constants
 
 const LOCATIONS = [
   'chennai',
@@ -3687,6 +3687,9 @@ const SWIGGY_API_URL =
 const RES_URL =
   'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.8438835&lng=80.05973639999999&restaurantId=';
 
+const RES_MENU_IMG =
+  'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/';
+
 const ALLOW_CORS_ERROR_MSG =
   ("%cIMPORTANT: Unable to fetch live data from Swiggy due to a CORS issue. To see live data, please install a 'CORS-Allow' extension in your browser.",
   'color:red;font-family:system-ui;font-size:2rem;font-weight:bold');
@@ -3752,5 +3755,6 @@ export {
   RES_URL,
   SWIGGY_API_URL,
   ALLOW_CORS_ERROR_MSG,
-  FAQ_LIST
+  FAQ_LIST,
+  RES_MENU_IMG
 };

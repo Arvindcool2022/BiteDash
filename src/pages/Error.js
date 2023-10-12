@@ -4,7 +4,7 @@ const Error = () => {
   const err = useRouteError();
   console.log(err);
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className="text-center">
       <h1>
         {err.status} : {err.statusText}
       </h1>

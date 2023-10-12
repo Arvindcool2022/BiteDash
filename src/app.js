@@ -20,15 +20,13 @@ const AppLayout = () => {
   const { LoggedInUser: defaultName } = useContext(UserContext);
   const [userName, setUserName] = useState(defaultName);
   const [login, setLogin] = useState(false);
-
   const [place, setPlace] = useState(LOCATIONS[0]);
 
   useEffect(() => {
     //! api call logic
     const data = { user: 'arvind' };
 
-    if (login) setUserName(data.user);
-    else setUserName(defaultName);
+    setUserName(login ? data.user : defaultName);
   }, [login]);
 
   return (
@@ -54,18 +52,9 @@ const AppRouter = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { path: '/', element: <MainSection /> },
-      {
-        path: '/about',
-        element: <About />
-      },
-      {
-        path: '/faq',
-        element: <FAQ />
-      },
-      {
-        path: '/cart',
-        element: <Cart />
-      },
+      { path: '/about', element: <About /> },
+      { path: '/faq', element: <FAQ /> },
+      { path: '/cart', element: <Cart /> },
       {
         path: '/res/:id',
         element: (
