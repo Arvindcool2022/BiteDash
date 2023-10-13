@@ -27,13 +27,18 @@ const ResPage = () => {
   if (resInfo.length === 0) return <h1 className="container">loading...</h1>;
   const {
     name = 'local restaurant',
-    cuisines,
-    costForTwoMessage: costForTwo,
-    sla: { maxDeliveryTime: deliveryTime },
-    avgRatingString,
-    totalRatingsString,
-    aggregatedDiscountInfo: { descriptionList: discount }
+    cuisines = ['burger', 'pizza'],
+    costForTwoMessage: costForTwo = '₹500 For Two',
+    sla: { maxDeliveryTime: deliveryTime = '30' },
+    avgRatingString = '4.4',
+    totalRatingsString = '10K+ ratings',
+    aggregatedDiscountInfo: { descriptionList: discount },
+    city = 'chennai',
+    locality = 'porur'
   } = resInfo[0]?.card?.card?.info;
+
+  console.log(resInfo[0]?.card?.card?.info);
+  // console.log(locality, ', ', city);
 
   //TODO: console.log(name, '=>', discount);
 
@@ -60,6 +65,9 @@ const ResPage = () => {
           <div className="capitalize p-4 ">
             <h1 className="font-oswald text-4xl mb-2">{name}</h1>
             <p className="mt-0 text-slate-400">{cuisines.join(', ')}</p>
+            <p className="my-2  text-slate-400">
+              location: {locality}, {city}
+            </p>
             <div className="flex justify-between">
               <p className="capitalize pe-4 font-mono font-bold">
                 {deliveryTime} mins to deliver
