@@ -1,34 +1,54 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import logo from '../utils/SVG/delivery app logo.svg';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../hooks/useOnlineStatus';
 import UserContext from '../utils/UserContext';
 import { useSelector } from 'react-redux';
+import { SWIGGY_API_URL_1, SWIGGY_API_URL_2 } from '../utils/constants';
 
 const LocationNames = ({ array }) =>
   array.map(place => (
-    <option key={place} value={place}>
-      {place}
+    <option key={place.place} value={place.geo}>
+      {place.place}
     </option>
   ));
 
-const Header = ({ locationList, loggedIn, loginFunc, cb }) => {
+const Header = ({ locationList, loggedIn, loginFunc, setPlace, setURL }) => {
   const statusKeyWord = loggedIn ? 'logout' : 'login';
   const cartItems = useSelector(store => store.cart.items);
   const onlineStatus = useOnlineStatus();
   const { LoggedInUser: userName } = useContext(UserContext);
 
+  const handleLocationChange = event => {
+    const selectedLocation = event.target.value;
+
+    // Find the selected location object
+    const selectedLocationObject = locationList.find(
+      location => location.geo === selectedLocation
+    );
+
+    if (selectedLocationObject) {
+      const { place, geo } = selectedLocationObject;
+
+      // Update the API URL and location name based on the selected location
+      const updatedURL = `${SWIGGY_API_URL_1}${geo}${SWIGGY_API_URL_2}`;
+
+      setURL(updatedURL);
+      setPlace(place);
+    }
+  };
+
   return (
-    <header className="text-center flex justify-between overflow-hidden relative px-1 shadow-md text-lg py-5">
+    <header className="text-center fixed top-0  w-full bg-white bg-opacity-75 z-10 backdrop-blur flex justify-between overflow-hidden  px-1 shadow-md text-lg py-5">
       <div className="items-center flex gap-2">
         <img className="w-14 absolute animate-drive" src={logo} alt="logo" />
         <h3 className="gradient-animation uppercase text-2xl font-oswald font-semibold m-0 ms-16 outline-orange-600 ">
           <Link to={'/'}>Bite Dash</Link>
         </h3>
         <select
-          className="border-none text-gray-500 outline-none capitalize w-fit"
+          className="border-none text-gray-500 bg-inherit outline-none capitalize w-fit"
           name="location"
-          onChange={e => cb(e.target.value)}
+          onChange={handleLocationChange}
         >
           <LocationNames array={locationList} />
         </select>

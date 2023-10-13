@@ -3,7 +3,11 @@ import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 import { Suspense, lazy, useContext, useEffect, useState } from 'react';
 import { Provider } from 'react-redux';
 
-import { LOCATIONS } from './utils/constants';
+import {
+  LOCATIONS,
+  SWIGGY_API_URL_1,
+  SWIGGY_API_URL_2
+} from './utils/constants';
 import UserContext from './utils/UserContext';
 import appStore from './store/appStore';
 
@@ -20,7 +24,10 @@ const AppLayout = () => {
   const { LoggedInUser: defaultName } = useContext(UserContext);
   const [userName, setUserName] = useState(defaultName);
   const [login, setLogin] = useState(false);
-  const [place, setPlace] = useState(LOCATIONS[0]);
+  const [place, setPlace] = useState(LOCATIONS[0].place);
+  const [URL, setURL] = useState(
+    `${SWIGGY_API_URL_1}${LOCATIONS[0].geo}${SWIGGY_API_URL_2}`
+  );
 
   useEffect(() => {
     //! api call logic
@@ -31,13 +38,14 @@ const AppLayout = () => {
 
   return (
     <Provider store={appStore}>
-      <UserContext.Provider value={{ LoggedInUser: userName, place }}>
+      <UserContext.Provider value={{ LoggedInUser: userName, place, URL }}>
         <div id="AppLayout">
           <Header
             locationList={LOCATIONS}
             loggedIn={login}
             loginFunc={() => setLogin(!login)}
-            cb={setPlace}
+            setPlace={setPlace}
+            setURL={setURL}
           />
           <Outlet />
         </div>

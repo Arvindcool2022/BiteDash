@@ -19,29 +19,33 @@ const Cart = () => {
 
   return (
     <section className="container">
-      <div className="flex justify-between bg-orange-100 p-4 capitalize font-semibold items-center rounded-lg shadow-lg">
-        <h1 className="text-2xl">Cart</h1>
-        <button
-          className="outline outline-2 outline-orange-600 py-1 px-4 text-sm capitalize rounded-lg transition-all duration-300 ease-in-out hover:bg-orange-600 hover:text-white active:scale-95"
-          onClick={clearCartItems}
-        >
-          clear all
-        </button>
-      </div>
-      {items.length === 0 ? (
-        <p className="my-6 text-lg font-medium text-center">
-          Looks like your cart is empty.
-        </p>
-      ) : (
-        items.map(item => <CartItemList key={item.card.info.id} data={item} />)
-      )}
-      {items.length !== 0 && (
-        <div className="border-t-2 py-6 my-4 text-center">
-          <p className="text-xl capitalize">
-            total = Rs.{Math.floor(totalPrice / 100)}
-          </p>
+      <div className="mt-28">
+        <div className="flex justify-between bg-orange-100 p-4 capitalize font-semibold items-center rounded-lg shadow-lg">
+          <h1 className="text-2xl">Cart</h1>
+          <button
+            className="outline outline-2 outline-orange-600 py-1 px-4 text-sm capitalize rounded-lg transition-all duration-300 ease-in-out hover:bg-orange-600 hover:text-white active:scale-95"
+            onClick={clearCartItems}
+          >
+            clear all
+          </button>
         </div>
-      )}
+        {items.length === 0 ? (
+          <p className="my-6 text-lg font-medium text-center">
+            Looks like your cart is empty.
+          </p>
+        ) : (
+          items.map(item => (
+            <CartItemList key={item.card.info.id} data={item} />
+          ))
+        )}
+        {items.length !== 0 && (
+          <div className="border-t-2 py-6 my-4 text-center">
+            <p className="text-xl capitalize">
+              total = Rs.{Math.floor(totalPrice / 100)}
+            </p>
+          </div>
+        )}
+      </div>
     </section>
   );
 };

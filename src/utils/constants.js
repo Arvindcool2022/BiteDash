@@ -1,17 +1,5 @@
 // all mock/fallback datas and constants
 
-const LOCATIONS = [
-  'chennai',
-  'mumbai',
-  'delhi',
-  'kolkata',
-  'hydrabad',
-  'bangalore',
-  'ahmedabad',
-  'pune',
-  'trivandaram'
-];
-
 const CAROUSEL_DATA = [
   {
     id: '1230658',
@@ -3681,8 +3669,16 @@ const RES_MENU = [
   }
 ];
 
-const SWIGGY_API_URL =
-  'https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
+const LOCATIONS = [
+  { place: 'chennai', geo: 'lat=13.0826802&lng=80.2707184' },
+  { place: 'mumbai', geo: 'lat=19.0759837&lng=72.8776559' },
+  { place: 'delhi', geo: 'lat=28.7040592&lng=77.10249019999999' },
+  { place: 'kolkata', geo: 'lat=22.572646&lng=88.36389500000001' },
+  { place: 'hydrabad', geo: 'lat=17.385044&lng=78.486671' },
+  { place: 'bangalore', geo: 'lat=12.9715987&lng=77.5945627' }
+];
+const SWIGGY_API_URL_1 = 'https://www.swiggy.com/dapi/restaurants/list/v5?';
+const SWIGGY_API_URL_2 = '&page_type=DESKTOP_WEB_LISTING';
 
 const RES_URL =
   'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.8438835&lng=80.05973639999999&restaurantId=';
@@ -3753,7 +3749,8 @@ export {
   RESTAURANT_DATA,
   RES_MENU,
   RES_URL,
-  SWIGGY_API_URL,
+  SWIGGY_API_URL_1,
+  SWIGGY_API_URL_2,
   ALLOW_CORS_ERROR_MSG,
   FAQ_LIST,
   RES_MENU_IMG

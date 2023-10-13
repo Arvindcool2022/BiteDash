@@ -54,33 +54,38 @@ const ResPage = () => {
   }
 
   return (
-    <section className="container">
-      <div className="flex justify-between border-b-2">
-        <div className="capitalize p-4 ">
-          <h1 className="font-oswald text-4xl mb-2">{name}</h1>
-          <p className="mt-0 text-slate-400">{cuisines.join(', ')}</p>
-          <div className="flex justify-between">
-            <p className="capitalize pe-4 font-mono font-bold">
-              {deliveryTime} mins to deliver
-            </p>
-            <p className="capitalize pe-4 font-mono font-bold"> {costForTwo}</p>
+    <section className="mt-28">
+      <div className="container">
+        <div className="flex justify-between border-b-2">
+          <div className="capitalize p-4 ">
+            <h1 className="font-oswald text-4xl mb-2">{name}</h1>
+            <p className="mt-0 text-slate-400">{cuisines.join(', ')}</p>
+            <div className="flex justify-between">
+              <p className="capitalize pe-4 font-mono font-bold">
+                {deliveryTime} mins to deliver
+              </p>
+              <p className="capitalize pe-4 font-mono font-bold">
+                {' '}
+                {costForTwo}
+              </p>
+            </div>
+          </div>
+          <div className="items-center py-6 px-3 capitalize ">
+            <h3 className="text-xl">{avgRatingString} rating</h3>
+            <p className="text-gray-500">{totalRatingsString}</p>
           </div>
         </div>
-        <div className="items-center py-6 px-3 capitalize ">
-          <h3 className="text-xl">{avgRatingString} rating</h3>
-          <p className="text-gray-500">{totalRatingsString}</p>
-        </div>
+        <section className="mt-20">
+          {menulist.map((item, index) => (
+            <MenuCard
+              key={item?.card?.card?.title}
+              info={item}
+              isOpen={menuIndex === index}
+              toggleFunc={() => toggleAnswer(index)}
+            />
+          ))}
+        </section>
       </div>
-      <section className="mt-20">
-        {menulist.map((item, index) => (
-          <MenuCard
-            key={item?.card?.card?.title}
-            info={item}
-            isOpen={menuIndex === index}
-            toggleFunc={() => toggleAnswer(index)}
-          />
-        ))}
-      </section>
     </section>
   );
 };
