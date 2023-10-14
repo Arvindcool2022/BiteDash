@@ -26,6 +26,11 @@
   "author": "Arvind Cool",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@testing-library/react": "^14.0.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
     "parcel": "^2.9.3",
     "postcss": "^8.4.30",
     "prettier": "^3.0.3",
