@@ -6,7 +6,8 @@ module.exports = {
     extend: {
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],
-        oswald: ['Oswald', 'sans-serif']
+        oswald: ['Oswald', 'sans-serif'],
+        satisfy: ['Satisfy', 'cursive']
       },
 
       keyframes: {
