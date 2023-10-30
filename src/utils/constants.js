@@ -3677,14 +3677,15 @@ const LOCATIONS = [
   { place: 'hydrabad', geo: 'lat=17.385044&lng=78.486671' },
   { place: 'bangalore', geo: 'lat=12.9715987&lng=77.5945627' }
 ];
-const SWIGGY_API_URL_1 = 'https://www.swiggy.com/dapi/restaurants/list/v5?';
+const SWIGGY_API_URL_1 =
+  'https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?';
 const SWIGGY_API_URL_2 = '&page_type=DESKTOP_WEB_LISTING';
 
 const RES_URL =
-  'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.8438835&lng=80.05973639999999&restaurantId=';
+  'https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.8438835&lng=80.05973639999999&restaurantId=';
 
 const RES_MENU_IMG =
-  'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/';
+  'https://corsproxy.io/?https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/';
 
 const ALLOW_CORS_ERROR_MSG =
   ("%cIMPORTANT: Unable to fetch live data from Swiggy due to a CORS issue. To see live data, please install a 'CORS-Allow' extension in your browser.",

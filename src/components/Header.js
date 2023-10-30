@@ -42,8 +42,8 @@ const Header = ({ locationList, loggedIn, loginFunc, setPlace, setURL }) => {
     <header className="text-center fixed top-0  w-full bg-white bg-opacity-75 z-10 backdrop-blur flex justify-between overflow-hidden  px-1 shadow-md text-lg py-5">
       <div className="items-center flex gap-2">
         <img className="w-14 absolute animate-drive" src={logo} alt="logo" />
-        <h3 className="font-satisfy text-3xl font-bold m-0 ms-16 gradient-animation ">
-          <Link to={'/'}>Bite Dash</Link>
+        <h3 className="font-oswald text-3xl font-semibold m-0 ms-16 gradient-animation ">
+          <Link to={'/'}>Bite-Dash</Link>
         </h3>
         <select
           className="border-none text-gray-500 bg-inherit outline-none capitalize w-fit"

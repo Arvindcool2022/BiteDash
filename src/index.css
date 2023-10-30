@@ -38,12 +38,12 @@
 
   .gradient-animation {
     @apply text-black bg-clip-text;
-    background: rgb(240, 249, 22);
+    background: rgb(249, 22, 22);
     background: linear-gradient(
       90deg,
-      rgba(240, 249, 22, 1) 0%,
-      rgba(255, 63, 0, 1) 50%,
-      rgba(240, 249, 22, 1) 100%
+      rgba(249, 22, 22, 1) 0%,
+      rgb(26, 22, 249) 50%,
+      rgba(249, 22, 22, 1) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
