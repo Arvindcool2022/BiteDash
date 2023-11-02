@@ -9,11 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        rubik: ['Rubik', 'sans-serif'],
-        oswald: ['Oswald', 'sans-serif'],
-        satisfy: ['Satisfy', 'cursive']
+        oswald: "'Oswald', sans-serif"
       },
-
       keyframes: {
         drive: {
           '0%': {

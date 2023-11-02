@@ -21,7 +21,7 @@ const Card = prop => {
           alt="food"
         />
         {hasDiscount && (
-          <span className="absolute bottom-0 left-0 w-full rounded p-1 text-white font-bold text-2xl text-center bg-gradient-to-t from-black to-transparent">{`${discount1} ${discount2}`}</span>
+          <span className="font-oswald absolute bottom-0 left-0 w-full rounded p-1 text-white font-bold text-2xl text-center bg-gradient-to-t from-black to-transparent">{`${discount1} ${discount2}`}</span>
         )}
       </div>
       <div className="text-sm">
