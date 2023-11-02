@@ -12,7 +12,7 @@ const About = () => {
   return (
     <section className="mt-28">
       <div className="container text-stone-700">
-        <h1 className="font-bold font-oswald text-3xl mb-8 underline text-orange-600">
+        <h1 className="font-bold text-3xl mb-8 underline text-orange-600">
           About Us
         </h1>
 
@@ -29,9 +29,7 @@ const About = () => {
           Welcome to Bite-Dash - Your Culinary Journey, Delivered!
         </p>
 
-        <h2 className="font-oswald font-medium text-xl my-4 text-orange-500">
-          Our Story
-        </h2>
+        <h2 className="font-medium text-xl my-4 text-orange-500">Our Story</h2>
 
         <p>
           At Bite-Dash, we believe that great food should be accessible to
@@ -43,7 +41,7 @@ const About = () => {
           other.
         </p>
 
-        <h2 className="font-oswald font-medium text-xl my-4 text-orange-500">
+        <h2 className="font-medium text-xl my-4 text-orange-500">
           Our Mission
         </h2>
 
@@ -57,7 +55,7 @@ const About = () => {
           diverse array of cuisines to suit every palate.
         </p>
 
-        <h2 className="font-oswald font-medium text-xl my-4 text-orange-500">
+        <h2 className="font-medium text-xl my-4 text-orange-500">
           Why Choose Bite-Dash?
         </h2>
         <ul>
@@ -87,7 +85,7 @@ const About = () => {
             businesses and initiatives.
           </li>
         </ul>
-        <h3 className=" italic my-8 font-bold uppercase text-3xl text-center">
+        <h3 className=" italic my-8 font-bold font-sans uppercase text-3xl text-center">
           <span className="gradient-animation"> 'Join Our Journey'</span>
         </h3>
 
@@ -98,9 +96,7 @@ const About = () => {
           delicious adventure together.
         </p>
 
-        <h2 className="font-oswald font-medium text-xl my-4 text-orange-500">
-          Contact Us
-        </h2>
+        <h2 className="font-medium text-xl my-4 text-orange-500">Contact Us</h2>
 
         <p className="mb-4">
           Have questions or feedback? We'd love to hear from you. Contact our

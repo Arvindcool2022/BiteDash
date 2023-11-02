@@ -1,7 +1,7 @@
 const SmallCarouselItem = ({ object }) => (
   <div
-    className="min-w-[200px] aspect-square"
-    onClick={() => (location.href = object.action.link)}
+    className=" aspect-square"
+    onClick={() => window.open(object.action.link, '_blank')}
     draggable="false"
   >
     <img

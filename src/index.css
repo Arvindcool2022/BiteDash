@@ -38,13 +38,8 @@
 
   .gradient-animation {
     @apply text-black bg-clip-text;
-    background: rgb(249, 22, 22);
-    background: linear-gradient(
-      90deg,
-      rgba(249, 22, 22, 1) 0%,
-      rgb(26, 22, 249) 50%,
-      rgba(249, 22, 22, 1) 100%
-    );
+    background: #38fad6;
+    background: linear-gradient(90deg, #43e97b 0%, #38fad6 50%, #43e97b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 7.5s linear infinite;

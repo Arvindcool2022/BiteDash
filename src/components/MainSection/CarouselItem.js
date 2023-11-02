@@ -1,7 +1,7 @@
 const CarouselItem = ({ object }) => (
   <div
-    className="min-w-[420px]"
-    onClick={() => (location.href = object.action.link)}
+    className="min-w-fit me-5"
+    onClick={() => window.open(object.action.link, '_blank')}
     draggable="false"
   >
     <img

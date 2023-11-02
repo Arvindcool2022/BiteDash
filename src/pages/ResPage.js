@@ -63,7 +63,7 @@ const ResPage = () => {
       <div className="container">
         <div className="flex justify-between border-b-2">
           <div className="capitalize p-4 ">
-            <h1 className="font-oswald text-4xl mb-2">{name}</h1>
+            <h1 className="text-4xl mb-2">{name}</h1>
             <p className="mt-0 text-slate-400">{cuisines.join(', ')}</p>
             <p className="my-2  text-slate-400">
               location: {locality}, {city}

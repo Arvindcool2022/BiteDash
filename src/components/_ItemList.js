@@ -14,7 +14,7 @@ const ItemList = ({ data }) => {
   return (
     <div className="my-6 p-4 flex justify-between rounded-xl shadow-md">
       <div>
-        <h3 className="font-oswald text-2xl mb-0">{name}</h3>
+        <h3 className="text-2xl mb-0">{name}</h3>
         <p className="mt-2 mb-6 font-medium">
           Rs.{price / 100 || defaultPrice / 100}
         </p>
