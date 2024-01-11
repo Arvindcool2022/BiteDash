@@ -14,7 +14,10 @@ const Card = prop => {
   const hasDiscount = discount1 !== '' && discount2 !== '';
   const imageURL = `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`;
   return (
-    <div className="p-2 text-neutral-800 rounded-xl cursor-pointer max-w-[300px] transition-all duration-150 ease-in-out hover:scale-95">
+    <div
+      data-testid="rescard"
+      className="p-2 text-neutral-800 rounded-xl cursor-pointer max-w-[300px] transition-all duration-150 ease-in-out hover:scale-95"
+    >
       <div className="relative rounded-xl overflow-hidden mb-4">
         <img
           className="w-full object-cover aspect-square"

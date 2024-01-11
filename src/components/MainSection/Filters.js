@@ -40,6 +40,7 @@ const Filters = ({ listOfRestaurant, filterResult, initialList }) => {
           value={searchValue}
           placeholder="Search..."
           onChange={searchItem}
+          data-testid="searchinput"
         />
         <button
           className="py-4 px-7 rounded-full outline-1 outline-orange-400 border border-solid border-orange-200 cursor-pointer bg-transparent transition-all duration-150 ease-in-out hover:bg-orange-100 active:bg-orange-200"
