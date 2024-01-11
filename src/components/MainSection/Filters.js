@@ -43,17 +43,16 @@ const Filters = ({ listOfRestaurant, filterResult, initialList }) => {
           data-testid="searchinput"
         />
         <button
+          data-testid="topRes"
           className="py-4 px-7 rounded-full outline-1 outline-orange-400 border border-solid border-orange-200 cursor-pointer bg-transparent transition-all duration-150 ease-in-out hover:bg-orange-100 active:bg-orange-200"
           onClick={filterByTopRating}
         >
-          {' '}
           4+ <i className="bi bi-star-fill text-xs"></i> rating
         </button>
         <button
           className="py-4 px-7 rounded-full outline-1 outline-orange-400 border border-solid border-orange-200 cursor-pointer bg-transparent transition-all duration-150 ease-in-out hover:bg-orange-100 active:bg-orange-200"
           onClick={resetFilters}
         >
-          {' '}
           reset
         </button>
       </div>
