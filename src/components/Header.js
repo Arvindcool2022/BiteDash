@@ -67,6 +67,7 @@ const Header = ({ locationList, loggedIn, loginFunc, setPlace, setURL }) => {
           <Link to={'/faq'}>FAQ</Link>
         </li>
         <li
+          role="button"
           className=" hover:text-orange-600 transition-all duration-300 ease-in-out"
           onClick={e => {
             e.preventDefault();

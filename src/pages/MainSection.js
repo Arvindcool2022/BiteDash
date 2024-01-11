@@ -20,6 +20,7 @@ const MainSection = () => {
   const [smallCarouselList, setSmallCarouselList] = useState([]);
   const [resList, setResList] = useState([]);
   const [filterList, setFilterList] = useState([]);
+  const [isFallBack, setIsFallBack] = useState(false);
   const { URL } = useContext(UserContext);
 
   const fallBack = () => {
@@ -27,7 +28,13 @@ const MainSection = () => {
     setSmallCarouselList(SMALL_CAROUSEL_DATA);
     setResList(RESTAURANT_DATA);
     setFilterList(RESTAURANT_DATA);
+    setIsFallBack(true);
   };
+
+  useEffect(() => {
+    if (isFallBack)
+      console.log('%cRunning fallBack', 'color:orange;font-size:2rem;');
+  }, [isFallBack]);
 
   const extractAndSetData = jsonData => {
     setCarouselList(
@@ -54,12 +61,12 @@ const MainSection = () => {
       const data = await fetch(URL).catch(e =>
         console.error('Not Fetched : ', e)
       );
-      console.log(URL);
       if (!data.ok)
         throw new Error(`Network response was not ok: ${data.status}`);
       else {
         const json = await data.json();
         extractAndSetData(json);
+        console.log(json);
       }
     } catch (error) {
       console.log(ALLOW_CORS_ERROR_MSG);

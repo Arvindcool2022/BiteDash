@@ -1,4 +1,5 @@
 const Card = prop => {
+  // console.log(prop);
   const {
     name,
     cloudinaryImageId,
